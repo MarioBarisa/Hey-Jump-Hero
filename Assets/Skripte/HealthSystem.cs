@@ -32,7 +32,13 @@ public class HealthSystem : MonoBehaviour
 
     private void UpdateHealthText()
     {
-        _healthText.text = $" ♥️{_currentHealth} / ♥️{_maxHealth}";
+        string životi = "";
+        for (int i = 0; i < _currentHealth / 10; i++) // AKO JE ZDRAVLJE 100, PRIKAZUJE 10 SRCA, AKO JE 50, PRIKAZUJE 5 SRCA, ITD.
+        {                                             // dijelimo sa 10 da ne prikazujemo 100 srca vec 10 srca, 20 srca
+            životi += "♥️ ";
+        }
+
+        _healthText.text = $" {životi} {_currentHealth}/{_maxHealth}"; // prikazuje broj života i postotak zdravlja
     }
 
     private IEnumerator FlashRed()
