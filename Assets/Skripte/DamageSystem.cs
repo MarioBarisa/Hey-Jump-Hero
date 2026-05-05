@@ -47,7 +47,7 @@ private void DealDamage(Rigidbody2D rb, Transform collisionTransform) {
 
  transform.position.x);
 
- Vector2 forceDirection = new Vector2(horizontal, 0.75f).normalized;
+ Vector2 forceDirection = new Vector2(horizontal, 0.75f).normalized; // da igrac dobije "kickback" da dobije DMG + da se igrač odbije i gore, ne samo horizontalno
 
  rb.linearVelocity = Vector2.zero;
 
