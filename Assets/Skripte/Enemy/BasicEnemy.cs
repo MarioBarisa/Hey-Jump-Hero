@@ -8,20 +8,13 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] float groundCheckDistance, movementSpeed;
 
-    private bool groundDetected;
-
     private int facingDirection;
 
-    private Vector2 movement;
 
-    private GameObject enemy;
-
-    private Rigidbody2D enemyRb;
+    private Rigidbody2D enemyRb; 
 
     private void Start()
     {
-        enemy= gameObject;
-
         enemyRb= GetComponent<Rigidbody2D>();
 
         facingDirection= 1;
@@ -29,30 +22,33 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
-        UpdateMovingState();
+        Move();
     }
 
 
-    private void UpdateMovingState()
+    private void Move()
     {
-        Vector2 direction = Vector2.down + Vector2.right * facingDirection;
-        direction.Normalize();
+        Vector2 origin = groundCheck.position;
 
-        groundDetected = Physics2D.Raycast(
+        Vector2 dir = new Vector2(facingDirection, -1f).normalized;
+
+        bool groundDetected = Physics2D.Raycast(
             groundCheck.position,
-            direction,
+            dir,
             groundCheckDistance,
             whatIsGround
         );
 
-        if(!groundDetected){
+        
+        if(!groundDetected)
+        {
             Flip();
-        } else{
-            movement.Set(
+        } 
+        else{
+            enemyRb.linearVelocity= new Vector2(
                 movementSpeed * facingDirection,
                 enemyRb.linearVelocity.y
             );
-            enemyRb.linearVelocity= movement;
         }
     } 
 
@@ -60,6 +56,6 @@ public class Enemy : MonoBehaviour
     private void Flip()
     {
         facingDirection *= -1;
-        enemy.transform.Rotate(0.0f, 180.0f, 0.0f);
+        transform.Rotate(0.0f, 180.0f, 0.0f);
     }
 }
