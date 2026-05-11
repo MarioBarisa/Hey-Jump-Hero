@@ -696,6 +696,7 @@ GameObject:
   - component: {fileID: 129985833}
   - component: {fileID: 129985831}
   - component: {fileID: 129985835}
+  - component: {fileID: 129985836}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -801,6 +802,20 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.5
+--- !u!114 &129985836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 129985830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e0038023b7494e86a0d52bc55806dd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DamageSystem
+  damageAmount: 10
+  knockbackForce: 5
 --- !u!1001 &216378912
 PrefabInstance:
   m_ObjectHideFlags: 0
