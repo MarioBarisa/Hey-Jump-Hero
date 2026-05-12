@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     private InputAction sprintAction;
     private InputAction jumpAction;
     private int jumpCount = 0;
-    private const int maxJumps = 2;
+    private const int maxJumps = 1;
 
     void OnEnable() => inputActions.FindActionMap("Player").Enable();
     void OnDisable() => inputActions.FindActionMap("Player").Disable();
