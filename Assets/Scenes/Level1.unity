@@ -4374,7 +4374,7 @@ GameObject:
   - component: {fileID: 675133239}
   - component: {fileID: 675133240}
   m_Layer: 0
-  m_Name: Audio Source
+  m_Name: 'BMG Audio Loop '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4408,13 +4408,13 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: c104587739373416c9e553a6c5c5b9ce, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 0
   DopplerLevel: 1
   MinDistance: 38.283955
   MaxDistance: 500
@@ -4644,7 +4644,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 0
+  Priority: 64
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -5056,7 +5056,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -2253911629886400664, guid: 23db3ac2e152a4413a39601e7cbb95fe, type: 3}
       propertyPath: m_Name
-      value: BasicSpikesLV1-NA 3
+      value: BasicSpikesLV1-NA 4
       objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 23db3ac2e152a4413a39601e7cbb95fe, type: 3}
       propertyPath: m_LocalScale.x
@@ -5499,7 +5499,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 64
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -5841,7 +5841,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 64
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -6212,8 +6212,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   downPosition: -1
-  moveSpeed: 3
-  waitDown: 2
+  moveSpeed: 1
+  waitDown: 1
   spikeCollider: {fileID: 1416486748}
 --- !u!1 &1419592085
 GameObject:
@@ -7135,7 +7135,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 64
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
