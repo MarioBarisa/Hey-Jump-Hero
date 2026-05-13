@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
-using TMPro; // dodaj ovo
+using TMPro; 
 using UnityEngine.UI;
 
 public class HealthSystem : MonoBehaviour
@@ -70,12 +70,6 @@ public class HealthSystem : MonoBehaviour
         StartCoroutine(nameof(ShieldTimer), duration);
     }
 
-    // private IEnumerator ShieldTimer(float duration)
-    // {
-    //     yield return new WaitForSeconds(duration);
-    //     damageMultiplier = 1f;
-    //     shieldActive = false;
-    // }
 
     private IEnumerator ShieldTimer(float duration)
     {
