@@ -1417,7 +1417,7 @@ TilemapCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: c1de830b90e2aba41a827dac2d843018, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -5690,9 +5690,9 @@ GameObject:
   - component: {fileID: 585645453}
   - component: {fileID: 585645455}
   - component: {fileID: 585645456}
-  - component: {fileID: 585645457}
   - component: {fileID: 585645458}
   - component: {fileID: 585645459}
+  - component: {fileID: 585645460}
   m_Layer: 0
   m_Name: 'Player '
   m_TagString: Player
@@ -5817,8 +5817,36 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!61 &585645457
-BoxCollider2D:
+--- !u!114 &585645458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585645452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 896f4875d5d984bdc85ebc460d7b6c95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthSystem
+  _maxHealth: 100
+  _healthText: {fileID: 1103421680}
+  shieldBar: {fileID: 1172110471}
+--- !u!114 &585645459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585645452}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20c82cfb5c8c340f2978d0db748377cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
+  coinText: {fileID: 922548287}
+--- !u!70 &585645460
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5851,46 +5879,9 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.063792944}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.8125, y: 2}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 0.7302475, y: 1.9055405}
-  m_EdgeRadius: 0
---- !u!114 &585645458
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 585645452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 896f4875d5d984bdc85ebc460d7b6c95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HealthSystem
-  _maxHealth: 100
-  _healthText: {fileID: 1103421680}
-  shieldBar: {fileID: 1172110471}
---- !u!114 &585645459
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 585645452}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20c82cfb5c8c340f2978d0db748377cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
-  coinText: {fileID: 922548287}
+  m_Offset: {x: 0.0036443472, y: -0.021865726}
+  m_Size: {x: 0.6740172, y: 1.9562685}
+  m_Direction: 0
 --- !u!1001 &609197233
 PrefabInstance:
   m_ObjectHideFlags: 0
