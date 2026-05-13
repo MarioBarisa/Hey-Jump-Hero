@@ -2,11 +2,13 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using TMPro; // dodaj ovo
+using UnityEngine.UI;
 
 public class HealthSystem : MonoBehaviour
 {
     [SerializeField] private int _maxHealth = 100;
     [SerializeField] private TextMeshProUGUI _healthText; // povuci iz Inspectora
+    [SerializeField] private Image shieldBar; // povuci iz Inspectora
 
     private int _currentHealth;
     private bool canTakeDamage = true;
@@ -68,9 +70,27 @@ public class HealthSystem : MonoBehaviour
         StartCoroutine(nameof(ShieldTimer), duration);
     }
 
+    // private IEnumerator ShieldTimer(float duration)
+    // {
+    //     yield return new WaitForSeconds(duration);
+    //     damageMultiplier = 1f;
+    //     shieldActive = false;
+    // }
+
     private IEnumerator ShieldTimer(float duration)
     {
-        yield return new WaitForSeconds(duration);
+        float elapsed = 0f;
+        shieldBar.gameObject.SetActive(true);
+
+        while (elapsed < duration)
+        {
+            elapsed += Time.deltaTime;
+            shieldBar.fillAmount = 1f - (elapsed / duration);
+            yield return null;
+        }
+
+        shieldBar.fillAmount = 1f;
+        shieldBar.gameObject.SetActive(false);
         damageMultiplier = 1f;
         shieldActive = false;
     }
