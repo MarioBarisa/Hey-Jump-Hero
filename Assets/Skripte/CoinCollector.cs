@@ -6,13 +6,13 @@ public class CoinCollector : MonoBehaviour
     [SerializeField] private TextMeshProUGUI coinText;
     private int _coins;
 
-    //private void Start() => UpdateUI(); OVO TREBA UNCOMMENT AKO IKADA BUDEMO DODALI UI ELEMENT ZA PRIKAZ BROJA NOVCICA
+    private void Start() => UpdateUI(); //OVO TREBA COMMENT AKO IKADA BUDEMO ŽLILI MAKNUTI UI ELEMENT ZA PRIKAZ BROJA NOVCICA
 
     public void AddCoin()
     {
         _coins++;
-       // UpdateUI();
+       UpdateUI();
     }
 
-   // private void UpdateUI() => coinText.text = $"Coins: {_coins}";
+   private void UpdateUI() => coinText.text = $"Coins: {_coins}";
 }
