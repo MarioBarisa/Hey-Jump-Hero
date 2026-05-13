@@ -13,6 +13,9 @@ public class HealthSystem : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
     private WaitForSeconds _flashDuration = new WaitForSeconds(0.5f);
 
+    private float damageMultiplier = 1f;
+    private bool shieldActive = false;
+
     private void Start()
     {
         _spriteRenderer = GetComponent<SpriteRenderer>();
@@ -24,7 +27,7 @@ public class HealthSystem : MonoBehaviour
     {
         if (!canTakeDamage) return;
         canTakeDamage = false;
-        _currentHealth -= damage;
+        _currentHealth -= Mathf.RoundToInt(damage * damageMultiplier);
         UpdateHealthText(); 
         StartCoroutine(FlashRed());
         if (_currentHealth <= 0) Die();
@@ -53,5 +56,22 @@ public class HealthSystem : MonoBehaviour
     private void Die()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void ActivateShield(float duration, float reduction)
+    {
+        if (shieldActive)
+            StopCoroutine(nameof(ShieldTimer));
+
+        damageMultiplier = 1f - reduction;
+        shieldActive = true;
+        StartCoroutine(nameof(ShieldTimer), duration);
+    }
+
+    private IEnumerator ShieldTimer(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+        damageMultiplier = 1f;
+        shieldActive = false;
     }
 }
