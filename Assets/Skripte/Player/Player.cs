@@ -10,7 +10,8 @@ public class Player : MonoBehaviour
     [SerializeField] private float jumpForce = 5;
     [SerializeField] InputActionAsset inputActions;
 
-    private Rigidbody2D rb;
+        private Rigidbody2D rb;
+    private Animator animator;
     private InputAction moveAction;
     private InputAction sprintAction;
     private InputAction jumpAction;
@@ -25,7 +26,8 @@ public class Player : MonoBehaviour
         moveAction = inputActions.FindAction("Move");
         sprintAction = inputActions.FindAction("Sprint");
         jumpAction = inputActions.FindAction("Jump");
-        rb = GetComponent<Rigidbody2D>();
+            rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -35,8 +37,10 @@ public class Player : MonoBehaviour
 
         rb.linearVelocity = new Vector2(moveX * speed, rb.linearVelocity.y);
 
-        if (moveX != 0)
-            transform.localScale = new Vector3(Mathf.Sign(moveX), 1, 1);
+            if (moveX != 0)
+                transform.localScale = new Vector3(Mathf.Sign(moveX), 1, 1);
+            
+        animator.SetBool("isWalking", Mathf.Abs(moveX) > 0.1f);
 
         if (jumpAction.triggered && jumpCount < maxJumps)
         {

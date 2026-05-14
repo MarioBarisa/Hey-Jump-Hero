@@ -37,6 +37,8 @@ public class HealthSystem : MonoBehaviour
 
     private void UpdateHealthText()
     {
+         if (_healthText == null) return;
+
         string životi = "";
         for (int i = 0; i < _currentHealth / 10; i++) // AKO JE ZDRAVLJE 100, PRIKAZUJE 10 SRCA, AKO JE 50, PRIKAZUJE 5 SRCA, ITD.
         {                                             // dijelimo sa 10 da ne prikazujemo 100 srca vec 10 srca, 20 srca
@@ -73,6 +75,8 @@ public class HealthSystem : MonoBehaviour
 
     private IEnumerator ShieldTimer(float duration)
     {
+        if (shieldBar == null) yield break;
+        
         float elapsed = 0f;
         shieldBar.gameObject.SetActive(true);
 
