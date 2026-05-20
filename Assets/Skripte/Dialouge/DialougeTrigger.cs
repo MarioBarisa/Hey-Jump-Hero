@@ -1,38 +1,21 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-public class DialougeTrigger : MonoBehaviour
+public class DialogueTrigger : MonoBehaviour
 {
-    //Detektiranje triggera sa igračem
+    [SerializeField] private Dialogue dialogue;
 
-    public Dialogue dialogueScript;
-
-    private bool PlayerDetected = false;
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-            if (collision.tag == "Player")
-            {
-            PlayerDetected = true;
-            dialogueScript.ToggleIndicator(PlayerDetected);
-            }
+        if (!other.CompareTag("Player")) return;
+
+        // dohvat CoinCollector s Playera i proslijedi Dialogu
+        CoinCollector collector = other.GetComponent<CoinCollector>();
+        dialogue.startDialogue(collector);
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D other)
     {
-        if (collision.tag == "Player")
-        {
-            PlayerDetected = false;
-            dialogueScript.ToggleIndicator(PlayerDetected);
-        }
+        if (!other.CompareTag("Player")) return;
+        dialogue.endDialogue();
     }
-    
-    void Update()
-    {
-        if (PlayerDetected && Keyboard.current != null && Keyboard.current.eKey.wasPressedThisFrame)
-        {
-            dialogueScript.startDialogue();
-        }
-    }
-
 }
