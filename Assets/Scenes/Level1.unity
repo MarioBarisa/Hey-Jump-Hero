@@ -9499,6 +9499,14 @@ PrefabInstance:
       propertyPath: m_TagString
       value: BossATM
       objectReference: {fileID: 0}
+    - target: {fileID: 3626916397498700004, guid: 1d41336291b45485c885717239e82f35, type: 3}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3626916397498700004, guid: 1d41336291b45485c885717239e82f35, type: 3}
+      propertyPath: m_SortingLayerID
+      value: 1213823857
+      objectReference: {fileID: 0}
     - target: {fileID: 7878350319992209165, guid: 1d41336291b45485c885717239e82f35, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.04511694
