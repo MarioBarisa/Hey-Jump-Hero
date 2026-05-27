@@ -9,6 +9,7 @@ public class HealthSystem : MonoBehaviour
     [SerializeField] private int _maxHealth = 100;
     [SerializeField] private TextMeshProUGUI _healthText; // povuci iz Inspectora
     [SerializeField] private Image shieldBar; // povuci iz Inspectora
+    [SerializeField] private bool isPlayer = false; // FALSE ZA SVE OSIM PLAYER OBJEKTA
 
     private int _currentHealth;
     private bool canTakeDamage = true;
@@ -20,7 +21,7 @@ public class HealthSystem : MonoBehaviour
 
     private void Start()
     {
-        _spriteRenderer = GetComponent<SpriteRenderer>();
+        _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         _currentHealth = _maxHealth;
         UpdateHealthText();
     }
@@ -49,17 +50,33 @@ public class HealthSystem : MonoBehaviour
     }
 
     private IEnumerator FlashRed()
+{
+    if (_spriteRenderer != null)
     {
         _spriteRenderer.color = Color.red;
         yield return _flashDuration;
         _spriteRenderer.color = Color.white;
         yield return _flashDuration;
-        canTakeDamage = true;
     }
+    else
+    {
+        yield return _flashDuration;
+        yield return _flashDuration;
+    }
+
+    canTakeDamage = true;
+}
 
     private void Die()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        if (isPlayer)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
     public void ActivateShield(float duration, float reduction)
