@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class HealthSystem : MonoBehaviour
 {
     [SerializeField] private int _maxHealth = 100;
-    [SerializeField] private TextMeshProUGUI _healthText; // povuci iz Inspectora
+    [SerializeField] private TMP_Text _healthText; // povuci iz Inspectora
     [SerializeField] private Image shieldBar; // povuci iz Inspectora
     [SerializeField] private bool isPlayer = false; // FALSE ZA SVE OSIM PLAYER OBJEKTA
 
@@ -38,15 +38,26 @@ public class HealthSystem : MonoBehaviour
 
     private void UpdateHealthText()
     {
-         if (_healthText == null) return;
+        
+            if (_healthText == null) return;
 
-        string životi = "";
-        for (int i = 0; i < _currentHealth / 10; i++) // AKO JE ZDRAVLJE 100, PRIKAZUJE 10 SRCA, AKO JE 50, PRIKAZUJE 5 SRCA, ITD.
-        {                                             // dijelimo sa 10 da ne prikazujemo 100 srca vec 10 srca, 20 srca
-            životi += "♥️ ";
+            string zivoti = "";
+            for (int i = 0; i < _currentHealth / 10; i++) // AKO JE ZDRAVLJE 100, PRIKAZUJE 10 SRCA, AKO JE 50, PRIKAZUJE 5 SRCA, ITD.
+            {                                             // dijelimo sa 10 da ne prikazujemo 100 srca vec 10 srca, 20 srca
+                zivoti += "♥️ ";
+            }
+
+        _healthText.text = $" {zivoti} {_currentHealth}/{_maxHealth}"; // prikazuje broj života i postotak zdravlja
+
+            if(isPlayer == false)
+        {
+             string zivotiEnemy = "";
+            for (int i = 0; i < _currentHealth/2; i++) // Podjela sa 2 da se manje srca prikazuje
+            {                                             
+                zivotiEnemy += "♥️ ";
+            }
+            _healthText.text = $" {zivotiEnemy}";
         }
-
-        _healthText.text = $" {životi} {_currentHealth}/{_maxHealth}"; // prikazuje broj života i postotak zdravlja
     }
 
     private IEnumerator FlashRed()
