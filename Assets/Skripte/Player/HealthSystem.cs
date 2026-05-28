@@ -11,6 +11,8 @@ public class HealthSystem : MonoBehaviour
     [SerializeField] private Image shieldBar; // povuci iz Inspectora
     [SerializeField] private bool isPlayer = false; // FALSE ZA SVE OSIM PLAYER OBJEKTA
 
+     [SerializeField] private int addHappyCoinsOnDeath = 2;
+
     private int _currentHealth;
     private bool canTakeDamage = true;
     private SpriteRenderer _spriteRenderer;
@@ -86,6 +88,11 @@ public class HealthSystem : MonoBehaviour
         }
         else
         {
+            CoinCollector happyCoins = FindFirstObjectByType<CoinCollector>();
+            if (happyCoins != null)
+            {
+                happyCoins.AddCoins(addHappyCoinsOnDeath);
+            }
             Destroy(gameObject);
         }
     }

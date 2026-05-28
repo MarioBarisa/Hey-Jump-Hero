@@ -52,7 +52,7 @@ public class PlayerMelee : MonoBehaviour
                     enemyScript.ApplyKnockback(transform.position);
                 }
 
-                if (hitParticleEffect != null)
+                if (hitParticleEffect != null)  // particle system koji se aktivira kad igrač pogodi neprijatelja
                 {
                     GameObject effect = Instantiate(
                         hitParticleEffect,

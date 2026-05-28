@@ -27,5 +27,11 @@ public class CoinCollector : MonoBehaviour
         UpdateUI();
     }
 
+    public void AddCoins(int amount)
+    {
+        _coins += amount;
+        UpdateUI();
+     }
+
     private void UpdateUI() => coinText.text = $"Coins: {_coins}";
 }
