@@ -8,7 +8,13 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] float groundCheckDistance, movementSpeed;
 
+    [SerializeField] private float knockbackForce = 6f;
+    [SerializeField] private float knockbackDuration = 0.2f;
+
     private int facingDirection;
+
+    private bool isKnockedBack;
+    private float knockbackTimer;
 
 
     private Rigidbody2D enemyRb; 
@@ -22,6 +28,17 @@ public class Enemy : MonoBehaviour
 
     private void Update()
     {
+        if (isKnockedBack)
+        {
+            knockbackTimer -= Time.deltaTime;
+
+            if (knockbackTimer <= 0f)
+            {
+                isKnockedBack = false;
+
+            }
+            return;
+        }
         Move();
     }
 
@@ -50,7 +67,18 @@ public class Enemy : MonoBehaviour
                 enemyRb.linearVelocity.y
             );
         }
-    } 
+    }
+
+public void ApplyKnockback(Vector2 hitSourcePosition)
+    {
+        isKnockedBack = true;
+        knockbackTimer = knockbackDuration;
+
+        Vector2 direction = ((Vector2)transform.position - hitSourcePosition).normalized;
+        enemyRb.linearVelocity = Vector2.zero;
+        enemyRb.AddForce(direction * knockbackForce, ForceMode2D.Impulse);
+        
+    }
 
 
     private void Flip()

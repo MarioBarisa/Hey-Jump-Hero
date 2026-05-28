@@ -44,6 +44,12 @@ public class PlayerMelee : MonoBehaviour
                 {
                     health.TakeDamage(attackDamage);
                 }
+
+                Enemy enemyScript = enemy.GetComponent<Enemy>();
+                if (enemyScript != null)
+                {
+                    enemyScript.ApplyKnockback(transform.position);
+                }
             }
         }
     }
