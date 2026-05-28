@@ -7,6 +7,7 @@ public class PlayerMelee : MonoBehaviour
     public float attackRadius = 1f;
     public LayerMask enemyMask;
     [SerializeField] private AudioSource audioSource;
+    [SerializeField] private GameObject hitParticleEffect;
 
     public int attackDamage = 2;
 
@@ -50,6 +51,22 @@ public class PlayerMelee : MonoBehaviour
                 {
                     enemyScript.ApplyKnockback(transform.position);
                 }
+
+                if (hitParticleEffect != null)
+                {
+                    GameObject effect = Instantiate(
+                        hitParticleEffect,
+                        enemy.transform.position + Vector3.up * 0.5f,
+                        Quaternion.identity
+                    );
+
+                    ParticleSystem ps = effect.GetComponent<ParticleSystem>();
+                    if (ps != null)
+                    {
+                        ps.Play();
+                    }
+                }
+
             }
         }
     }
