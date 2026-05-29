@@ -837,6 +837,8 @@ MonoBehaviour:
   _healthText: {fileID: 1936015233}
   shieldBar: {fileID: 0}
   isPlayer: 0
+  happyCoinsText: {fileID: 5043607819332347744, guid: f47caf1a161844a968e42ad98d21ec7d, type: 3}
+  addHappyCoinsOnDeath: 20
 --- !u!1 &141665482
 GameObject:
   m_ObjectHideFlags: 0
@@ -13143,6 +13145,8 @@ MonoBehaviour:
   _healthText: {fileID: 1103421680}
   shieldBar: {fileID: 1172110471}
   isPlayer: 1
+  happyCoinsText: {fileID: 0}
+  addHappyCoinsOnDeath: 2
 --- !u!114 &585645459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16252,6 +16256,8 @@ MonoBehaviour:
   _healthText: {fileID: 1024334213}
   shieldBar: {fileID: 0}
   isPlayer: 0
+  happyCoinsText: {fileID: 0}
+  addHappyCoinsOnDeath: 2
 --- !u!4 &1245103322 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7878350319992209165, guid: 63e421f79d9dd406797b5263327e1eed, type: 3}

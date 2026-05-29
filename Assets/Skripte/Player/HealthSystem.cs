@@ -11,7 +11,8 @@ public class HealthSystem : MonoBehaviour
     [SerializeField] private Image shieldBar; // povuci iz Inspectora
     [SerializeField] private bool isPlayer = false; // FALSE ZA SVE OSIM PLAYER OBJEKTA
 
-     [SerializeField] private int addHappyCoinsOnDeath = 2;
+[SerializeField] private GameObject happyCoinsText; // Prefab za sretni novčić
+    [SerializeField] private int addHappyCoinsOnDeath = 2;
 
     private int _currentHealth;
     private bool canTakeDamage = true;
@@ -92,6 +93,12 @@ public class HealthSystem : MonoBehaviour
             if (happyCoins != null)
             {
                 happyCoins.AddCoins(addHappyCoinsOnDeath);
+            }
+            if (happyCoinsText != null)
+            {
+                GameObject textInstance = Instantiate(happyCoinsText, transform.position, Quaternion.identity);
+                textInstance.GetComponentInChildren<TMP_Text>().text = $"+{addHappyCoinsOnDeath}"; // Postavi tekst na broj sretnih novčića
+                Destroy(textInstance, 1f); // Uništi tekst nakon 1 sekunda
             }
             Destroy(gameObject);
         }
