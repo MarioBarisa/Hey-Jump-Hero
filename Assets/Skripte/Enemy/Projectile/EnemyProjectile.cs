@@ -35,6 +35,9 @@ public class EnemyProjectile : MonoBehaviour
         hit= false;
         boxCollider.enabled= true;
 
+        CancelInvoke();
+        Invoke(nameof(Deactivate), 3f);
+
         float localScaleX= transform.localScale.x;
         if(Mathf.Sign(localScaleX)!= _direction)
         {
@@ -43,7 +46,7 @@ public class EnemyProjectile : MonoBehaviour
         transform.localScale= new Vector3(localScaleX, transform.localScale.y, transform.localScale.z);
     }
 
-    private void Dectivate()
+    private void Deactivate()
     {
         gameObject.SetActive(false);
     }
