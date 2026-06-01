@@ -18541,9 +18541,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02ade177bef423e4e976061564d20e82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RangedEnemy
-  attackCooldown: 0.3
+  attackCooldown: 2
   range: 7.65
-  damage: 2
+  damage: 10
   projectilePoint: {fileID: 1040889610}
   projectiles:
   - {fileID: 1084270850}

@@ -8,6 +8,13 @@ public class EnemyProjectile : MonoBehaviour
 
     private BoxCollider2D boxCollider;
 
+    private int damage;
+
+    public void SetDamage(int _damage)
+    {
+        damage = _damage;
+    }
+
     public void Awake()
     {
         boxCollider= GetComponent<BoxCollider2D>();
@@ -23,8 +30,14 @@ public class EnemyProjectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.TryGetComponent(out HealthSystem health))
+        {
+            health.TakeDamage(damage);
+        }
         hit= true;
         boxCollider.enabled= false;
+
+        Deactivate();
 
     }
 

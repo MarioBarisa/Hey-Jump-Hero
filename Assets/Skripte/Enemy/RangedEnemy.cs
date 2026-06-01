@@ -5,7 +5,7 @@ public class RangedEnemy : MonoBehaviour
     [Header("Attack Parameters")]
     [SerializeField] private float attackCooldown;
     [SerializeField] private float range;
-    [SerializeField] private float damage;
+    [SerializeField] private int damage;
 
     [Header("Ranged Attack")]
     [SerializeField] private Transform projectilePoint;
@@ -42,8 +42,12 @@ public class RangedEnemy : MonoBehaviour
 
 
         projectiles[projectileIndex].transform.position= projectilePoint.position;
-        projectiles[projectileIndex].GetComponent<EnemyProjectile>().SetDirection(transform.localScale.x);
         
+        EnemyProjectile projectile =
+            projectiles[projectileIndex].GetComponent<EnemyProjectile>();
+
+        projectile.SetDamage(damage);
+        projectile.SetDirection(transform.localScale.x);
     }
 
     private int FindProjectile()
