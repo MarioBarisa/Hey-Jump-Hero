@@ -9,6 +9,8 @@ public class PlayerMelee : MonoBehaviour
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private GameObject hitParticleEffect;
 
+    [SerializeField] private Animator  animator;
+
     public int attackDamage = 2;
 
     private float cooldownTime = 0.5f;
@@ -18,6 +20,11 @@ public class PlayerMelee : MonoBehaviour
     {
         if (attackOrigin == null) return;
         Gizmos.DrawWireSphere(attackOrigin.position, attackRadius);
+    }
+
+    private void StopAttackAnimation()
+    {
+        animator.SetBool("isAttacking", false);
     }
 
     void Update()
@@ -30,6 +37,10 @@ public class PlayerMelee : MonoBehaviour
         if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame && cooldownTimer <= 0)
         {
             cooldownTimer = cooldownTime;
+
+            animator.SetBool("isAttacking", true);
+
+            Invoke(nameof(StopAttackAnimation), 0.2f);
 
             if (audioSource != null && audioSource.clip != null)
             {

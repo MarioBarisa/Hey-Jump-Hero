@@ -13456,7 +13456,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 4568499683821168591, guid: 075ffb3b91c871248ae852a01cb96aef, type: 3}
+  m_Sprite: {fileID: -688725271256405091, guid: 66e03bb3b15d5ad4da8ed9d392c116f3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -13636,6 +13636,7 @@ MonoBehaviour:
     m_Bits: 128
   audioSource: {fileID: 1396864029}
   hitParticleEffect: {fileID: 1493830449}
+  animator: {fileID: 585645461}
   attackDamage: 4
 --- !u!1001 &609197233
 PrefabInstance:
@@ -18533,6 +18534,7 @@ GameObject:
   - component: {fileID: 1438229805}
   - component: {fileID: 1438229808}
   - component: {fileID: 1438229809}
+  - component: {fileID: 1438229810}
   m_Layer: 0
   m_Name: RangedEnemy
   m_TagString: Untagged
@@ -18682,6 +18684,28 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 2.1069596}
   m_EdgeRadius: 0
+--- !u!95 &1438229810
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438229803}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2c9398d8614b6a0418019c79dd4e4851, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &1443569676
 PrefabInstance:
   m_ObjectHideFlags: 0
