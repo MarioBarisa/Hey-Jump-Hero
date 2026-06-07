@@ -5,7 +5,7 @@ public class PlayerRanged : MonoBehaviour
     [Header("Attack Parameters")]
     [SerializeField] private float attackCooldown;
     [SerializeField] private int damage;
-    
+
     [Header("Ranged Attack")]
     [SerializeField] private Transform projectilePoint;
     [SerializeField] private GameObject[] projectiles;
@@ -14,7 +14,7 @@ public class PlayerRanged : MonoBehaviour
     private void Update()
     {
         cooldownTimer += Time.deltaTime;
-        if (Mouse.current != null && Mouse.current.rightButton.wasPressedThisFrame && cooldownTimer >= attackCooldown)
+        if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame && cooldownTimer >= attackCooldown)
         {
             RangedAttack();
         }

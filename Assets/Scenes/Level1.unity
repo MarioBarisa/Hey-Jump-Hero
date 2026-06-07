@@ -13726,6 +13726,8 @@ MonoBehaviour:
   runSpeed: 8
   jumpForce: 5
   inputActions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
+  meleeScript: {fileID: 585645462}
+  rangedScript: {fileID: 585645463}
 --- !u!50 &585645456
 Rigidbody2D:
   serializedVersion: 5

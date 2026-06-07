@@ -10,6 +10,9 @@ public class Player : MonoBehaviour
     [SerializeField] private float jumpForce = 5;
     [SerializeField] InputActionAsset inputActions;
 
+    [SerializeField] private PlayerMelee meleeScript;
+    [SerializeField] private PlayerRanged rangedScript;
+
         private Rigidbody2D rb;
     private Animator animator;
     private InputAction moveAction;
@@ -47,6 +50,21 @@ public class Player : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             jumpCount++;
+        }
+
+        // 1 za melee
+        if (Keyboard.current.digit1Key.wasPressedThisFrame)
+        {
+            Debug.Log("nož");
+            meleeScript.enabled = true;
+            rangedScript.enabled = false;
+        }
+        // 2 za ranged
+        if (Keyboard.current.digit2Key.wasPressedThisFrame)
+        {
+            Debug.Log("puška");
+            meleeScript.enabled = false;
+            rangedScript.enabled = true;
         }
     }
 
