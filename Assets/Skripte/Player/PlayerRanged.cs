@@ -11,6 +11,8 @@ public class PlayerRanged : MonoBehaviour
     [SerializeField] private GameObject[] projectiles;
     private float cooldownTimer = Mathf.Infinity;
 
+    [SerializeField] private AudioSource audioSource;
+
     private void Update()
     {
         cooldownTimer += Time.deltaTime;
@@ -22,6 +24,10 @@ public class PlayerRanged : MonoBehaviour
 
     private void RangedAttack()
     {
+        if (audioSource != null && audioSource.clip != null)
+        {
+            audioSource.Play();
+        }
         cooldownTimer = 0;
         int projectileIndex = FindProjectile();
         projectiles[projectileIndex].transform.position = projectilePoint.position;
