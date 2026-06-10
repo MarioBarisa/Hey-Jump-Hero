@@ -85,17 +85,16 @@ public class HealthSystem : MonoBehaviour
 
     private void Die()
     {
+        int currentScene= SceneManager.GetActiveScene().buildIndex;
         if (isPlayer)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
-        if (isBoss)
+        if (isBoss && currentScene + 1 < SceneManager.sceneCountInBuildSettings)
         {
-            int currentScene= SceneManager.GetActiveScene().buildIndex;
-            if (currentScene + 1 < SceneManager.sceneCountInBuildSettings)
-            {
-                SceneManager.LoadScene(currentScene + 1);
-            }
+            
+            SceneManager.LoadScene(currentScene + 1);
+            
             return;
         }
         else
