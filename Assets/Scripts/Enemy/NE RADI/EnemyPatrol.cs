@@ -12,12 +12,12 @@ public class EnemyPatrol : MonoBehaviour
     [Header ("Movement Parameters")]
     [SerializeField] private float speed;
 
-    private Vector3 initScale;
+    // private Vector3 initScale;
     private bool movingLeft;
 
     private void Awake()
     {
-        initScale= enemy.localScale;
+        // initScale= enemy.localScale;
     }
 
     private void Update()
@@ -47,24 +47,17 @@ public class EnemyPatrol : MonoBehaviour
 
     private void Flip()
     {
-        movingLeft= !movingLeft;
-        transform.Rotate(0f, 180f, 0f);
+        movingLeft = !movingLeft;
+        enemy.Rotate(0f, 180f, 0f);
     }
 
     private void MovementInDirection(int direction)
     {
-        enemy.localScale= new Vector3(
-            Mathf.Abs(initScale.x) * (movingLeft ? -1 : 1), 
-            initScale.y, 
-            initScale.z
-        );
-
-        enemy.position= new Vector3(
+        enemy.position = new Vector3(
             enemy.position.x + Time.deltaTime * direction * speed,
             enemy.position.y,
             enemy.position.z
         );
-
     }
 
 }

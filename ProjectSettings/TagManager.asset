@@ -7,6 +7,7 @@ TagManager:
   - Ground
   - BossATM
   - Boss
+  - PatrolEdge
   layers:
   - Default
   - TransparentFX
