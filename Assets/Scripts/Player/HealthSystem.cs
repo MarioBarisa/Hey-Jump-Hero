@@ -11,6 +11,8 @@ public class HealthSystem : MonoBehaviour
     [SerializeField] private Image shieldBar; // povuci iz Inspectora
     [SerializeField] private bool isPlayer = false; // FALSE ZA SVE OSIM PLAYER OBJEKTA
 
+    [SerializeField] private bool isBoss;
+
 [SerializeField] private GameObject happyCoinsText; // Prefab za sretni novčić
     [SerializeField] private int addHappyCoinsOnDeath = 2;
 
@@ -86,6 +88,15 @@ public class HealthSystem : MonoBehaviour
         if (isPlayer)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+        if (isBoss)
+        {
+            int currentScene= SceneManager.GetActiveScene().buildIndex;
+            if (currentScene + 1 < SceneManager.sceneCountInBuildSettings)
+            {
+                SceneManager.LoadScene(currentScene + 1);
+            }
+            return;
         }
         else
         {
