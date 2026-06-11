@@ -92,8 +92,7 @@ public class HealthSystem : MonoBehaviour
         }
         if (isBoss && currentScene + 1 < SceneManager.sceneCountInBuildSettings)
         {
-            
-            SceneManager.LoadScene(currentScene + 1);
+             FindFirstObjectByType<FadeManager>().LoadNextLevel();
             
             return;
         }
