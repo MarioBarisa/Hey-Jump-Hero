@@ -24,6 +24,15 @@ public class HealthSystem : MonoBehaviour
     private float damageMultiplier = 1f;
     private bool shieldActive = false;
 
+
+    // OVO JE FUNKCIJA KOJA SE POZIVA KADA IGRAČ IZABERE HEALTH U DIALOGU, POVEĆAVA MAKSIMALNO ZDRAVLJE I TRENUTNO ZDRAVLJE ZA ODREĐENI IZNOS
+    public void upgradePlayerHealth(int additiveHealth)
+    {
+        _maxHealth += additiveHealth;
+        _currentHealth += additiveHealth; // Povećaj trenutne živote za isti iznos
+        UpdateHealthText();
+    }
+
     private void Start()
     {
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();

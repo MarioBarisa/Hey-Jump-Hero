@@ -27,6 +27,18 @@ public class PlayerMelee : MonoBehaviour
         animator.SetBool("isAttacking", false);
     }
 
+    //UPGRADE ATK DAMAGE
+    public void upgradeAttackDamage(int additiveDamage)
+    {
+        attackDamage += additiveDamage;
+    }
+
+    //SETTER ZA ATK DAMAGE (ako želimo direktno postaviti vrijednost, npr. na 10)
+    public void setAttackDamage(int newDamage)
+    {
+        attackDamage = newDamage;
+    }
+
     void Update()
     {
         if (cooldownTimer > 0)

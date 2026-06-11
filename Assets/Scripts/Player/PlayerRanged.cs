@@ -12,6 +12,17 @@ public class PlayerRanged : MonoBehaviour
     private float cooldownTimer = Mathf.Infinity;
 
     [SerializeField] private AudioSource audioSource;
+    
+    //ISTE FUNKCIJE KAO U PlayerMelee, ALI ZA RANGED NAPAD
+        public void SetDamage(int newDamage)
+    {
+        damage = newDamage;
+    }
+
+    public void UpgradeDamage(int additiveDamage)
+    {
+        damage += additiveDamage;
+    }
 
     private void Update()
     {
