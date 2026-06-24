@@ -48,7 +48,7 @@ public class EnemyPatrol : MonoBehaviour
     private void Flip()
     {
         movingLeft = !movingLeft;
-        enemy.Rotate(0f, 180f, 0f);
+        enemy.localScale *= -1;
     }
 
     private void MovementInDirection(int direction)
