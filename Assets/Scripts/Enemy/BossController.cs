@@ -4,23 +4,20 @@ public class BossController : MonoBehaviour
     [SerializeField] private float speed = 3f;
     [SerializeField] private Transform leftEdge;
     [SerializeField] private Transform rightEdge;
+    [SerializeField] private DamageSystem damageSystem;
     private Animator animator;
     private bool movingRight = true;
     private bool isAttacking = false;
-    private float attackTimer = 0f;
     private bool playerInRange = false;
-
-    [SerializeField] private DamageSystem damageSystem;
 
     public void DealDamage()
     {
-        damageSystem.gameObject.SetActive(true);
-        Invoke(nameof(DisableDamage), 0.2f);
+        damageSystem.canDamage = true;
     }
 
     private void DisableDamage()
     {
-        damageSystem.gameObject.SetActive(false);
+        damageSystem.canDamage = false;
     }
 
     private void Start()
@@ -32,19 +29,15 @@ public class BossController : MonoBehaviour
     {
         if (playerInRange)
         {
-            attackTimer += Time.deltaTime;
             if (!isAttacking)
             {
-                attackTimer = 0f;
                 isAttacking = true;
-                Debug.Log("SetBool isAttacking TRUE");
                 animator.SetBool("isAttacking", true);
                 Invoke(nameof(StopAttack), 1.5f);
             }
         }
         else
         {
-            attackTimer = 0f;
             if (!isAttacking)
                 Patrol();
         }
@@ -54,6 +47,7 @@ public class BossController : MonoBehaviour
     {
         isAttacking = false;
         animator.SetBool("isAttacking", false);
+        damageSystem.canDamage = false;
     }
 
     private void Patrol()
@@ -61,14 +55,20 @@ public class BossController : MonoBehaviour
         if (movingRight)
         {
             transform.position += Vector3.right * speed * Time.deltaTime;
-            transform.localScale = new Vector3(1, 1, 1);
-            if (transform.position.x >= rightEdge.position.x) movingRight = false;
+            if (transform.position.x >= rightEdge.position.x)
+            {
+                movingRight = false;
+                transform.eulerAngles = new Vector3(0, 180, 0);
+            }
         }
         else
         {
             transform.position += Vector3.left * speed * Time.deltaTime;
-            transform.localScale = new Vector3(-1, 1, 1);
-            if (transform.position.x <= leftEdge.position.x) movingRight = true;
+            if (transform.position.x <= leftEdge.position.x)
+            {
+                movingRight = true;
+                transform.eulerAngles = new Vector3(0, 0, 0);
+            }
         }
     }
 
