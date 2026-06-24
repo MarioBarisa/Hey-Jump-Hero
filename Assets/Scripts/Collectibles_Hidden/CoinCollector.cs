@@ -33,5 +33,10 @@ public class CoinCollector : MonoBehaviour
         UpdateUI();
      }
 
-    private void UpdateUI() => coinText.text = $"Coins: {_coins}";
+    private void UpdateUI()
+    {
+        coinText.text = $"Coins: {_coins}";
+        HealthSystem hs = GetComponent<HealthSystem>();
+        if(hs != null) hs.refreshUpgradeLabel();
+    } 
 }

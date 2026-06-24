@@ -13,8 +13,12 @@ public class HealthSystem : MonoBehaviour
 
     [SerializeField] private bool isBoss;
 
-[SerializeField] private GameObject happyCoinsText; // Prefab za sretni novčić
+    [SerializeField] private GameObject happyCoinsText; // Prefab za sretni novčić
     [SerializeField] private int addHappyCoinsOnDeath = 2;
+
+    [SerializeField] private TMP_Text upgradeAvailableLable;
+    [SerializeField] private int upgradeCheckCost = 4; // ovo se mora podudarati sa cijenom upgrejda!
+    [SerializeField] private CoinCollector coinCollector;
 
     private int _currentHealth;
     private bool canTakeDamage = true;
@@ -37,6 +41,7 @@ public class HealthSystem : MonoBehaviour
     {
         _spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         _currentHealth = _maxHealth;
+        if (coinCollector == null) coinCollector = GetComponent<CoinCollector>();
         UpdateHealthText();
     }
 
@@ -71,6 +76,11 @@ public class HealthSystem : MonoBehaviour
                 zivotiEnemy += "♥️ ";
             }
             _healthText.text = $" {zivotiEnemy}";
+        }
+
+        if (upgradeAvailableLable != null && coinCollector != null && isPlayer)
+        {
+            upgradeAvailableLable.gameObject.SetActive(coinCollector.HasEnoughCoins(upgradeCheckCost));
         }
     }
 
@@ -151,5 +161,13 @@ public class HealthSystem : MonoBehaviour
         shieldBar.gameObject.SetActive(false);
         damageMultiplier = 1f;
         shieldActive = false;
+    }
+
+    public void refreshUpgradeLabel()
+    {
+        if (upgradeAvailableLable != null && coinCollector != null && isPlayer)
+        {
+            upgradeAvailableLable.gameObject.SetActive(coinCollector.HasEnoughCoins(upgradeCheckCost));
+        }
     }
 }
