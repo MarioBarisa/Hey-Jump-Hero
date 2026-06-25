@@ -28,6 +28,23 @@ public class HealthSystem : MonoBehaviour
     private float damageMultiplier = 1f;
     private bool shieldActive = false;
 
+    private bool isStunned = false;
+
+    public void ApplyStun(float duration)
+    {
+        if (!isStunned)
+            StartCoroutine(StunCoroutine(duration));
+    }
+
+    private IEnumerator StunCoroutine(float duration)
+    {
+        isStunned = true;
+        yield return new WaitForSeconds(duration);
+        isStunned = false;
+    }
+
+    public bool IsStunned() => isStunned;
+
 
     // OVO JE FUNKCIJA KOJA SE POZIVA KADA IGRAČ IZABERE HEALTH U DIALOGU, POVEĆAVA MAKSIMALNO ZDRAVLJE I TRENUTNO ZDRAVLJE ZA ODREĐENI IZNOS
     public void upgradePlayerHealth(int additiveHealth)
