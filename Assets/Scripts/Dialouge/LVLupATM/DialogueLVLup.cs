@@ -48,6 +48,17 @@ public class DialogueLVLup : MonoBehaviour
     //Player coin collector
     private CoinCollector _coinCollector;
     [SerializeField] private int coinCost;
+    
+    //Upgrade hud
+    [SerializeField] UpgradeHUD upgradeHUD;
+    
+    private void RefreshHUD()
+    {
+        if (upgradeHUD != null)
+        {
+            upgradeHUD.Refresh();
+        }
+    }
 
 void updateCoinCost()
     {
@@ -62,11 +73,11 @@ void updateCoinCost()
 [SerializeField] private PlayerRanged playerRanged;
     [SerializeField] private HealthSystem playerHealth;
 
-    // brojanje upgrejda-a
-private int healthUpgradeCount = 0;
-private int meleeUpgradeCount = 0;
-private int rangedUpgradeCount = 0;
-private const int maxUpgrades = 3;
+         // brojanje upgrejda-a
+        public int healthUpgradeCount = 0;
+        public int meleeUpgradeCount = 0;
+        public int rangedUpgradeCount = 0;
+        private const int maxUpgrades = 3;
 
 
     private int selectedUpgrade = -1;
@@ -81,7 +92,9 @@ public void OnSelectHealth()
         {
             playerHealth.upgradePlayerHealth(healthUpgradeAmount);
             healthUpgradeCount++;
+            selectedUpgrade = 0;
             ToggleChoiceButtons(true);
+            RefreshHUD();
         }
     
     Debug.Log("Health kliknut");
@@ -99,7 +112,9 @@ public void OnSelectMelee()
     {
         playerMelee.upgradeAttackDamage(meleeUpgradeAmount);
         meleeUpgradeCount++;
+        selectedUpgrade = 1;
         ToggleChoiceButtons(true);
+        RefreshHUD();
     }
 }
 
@@ -113,7 +128,9 @@ public void OnSelectRanged()
     {
         playerRanged.UpgradeDamage(rangedUpgradeAmount);
         rangedUpgradeCount++;
+        selectedUpgrade = 2;
         ToggleChoiceButtons(true);
+        RefreshHUD();
     }
 }
 
@@ -224,25 +241,33 @@ public void OnSelectRanged()
 public void OnPayPressed()
 {
     if (_coinCollector == null) return;
+    updateCoinCost();
+
+    if (selectedUpgrade >= 0)
+    {
+        endDialogue();
+        return;
+    }
 
     if (_coinCollector.SpendCoins(coinCost))
-{
-    if (selectedUpgrade == 0 && playerHealth != null)
     {
-        playerHealth.upgradePlayerHealth(healthUpgradeAmount);
-        healthUpgradeCount++;
+        if (playerHealth != null && healthUpgradeCount < maxUpgrades)
+        {
+            playerHealth.upgradePlayerHealth(healthUpgradeAmount);
+            healthUpgradeCount++;
+        }
+        else if (playerMelee != null && meleeUpgradeCount < maxUpgrades)
+        {
+            playerMelee.upgradeAttackDamage(meleeUpgradeAmount);
+            meleeUpgradeCount++;
+        }
+        else if (playerRanged != null && rangedUpgradeCount < maxUpgrades)
+        {
+            playerRanged.UpgradeDamage(rangedUpgradeAmount);
+            rangedUpgradeCount++;
+        }
+        RefreshHUD();
     }
-    else if (selectedUpgrade == 1 && playerMelee != null)
-    {
-        playerMelee.upgradeAttackDamage(meleeUpgradeAmount);
-        meleeUpgradeCount++;
-    }
-    else if (selectedUpgrade == 2 && playerRanged != null)
-    {
-        playerRanged.UpgradeDamage(rangedUpgradeAmount);
-        rangedUpgradeCount++;
-    }
-}
     endDialogue();
 }
 
