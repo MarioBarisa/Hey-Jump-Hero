@@ -1441,7 +1441,7 @@ Transform:
   m_Children:
   - {fileID: 519420032}
   - {fileID: 619394802}
-  - {fileID: 1697546878}
+  - {fileID: 1572221573}
   - {fileID: 725258665}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13875,7 +13875,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3353b25f1c1e74cf885effebd98de831, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HeyJumpHero.CameraFollow
-  target: {fileID: 585645454}
+  target: {fileID: 796059000}
   smoothSpeed: 5
   offset: {x: 0, y: 1, z: -10}
 --- !u!1001 &554353740
@@ -14143,55 +14143,6 @@ Transform:
   - {fileID: 1096954507}
   m_Father: {fileID: 506541956}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &585645454 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6695072759277445631, guid: 332f1da978601164187fb83847e410ba, type: 3}
-  m_PrefabInstance: {fileID: 5706933659388489140}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &585645458 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3414437134529650708, guid: 332f1da978601164187fb83847e410ba, type: 3}
-  m_PrefabInstance: {fileID: 5706933659388489140}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 896f4875d5d984bdc85ebc460d7b6c95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HealthSystem
---- !u!114 &585645462 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2137399359764454156, guid: 332f1da978601164187fb83847e410ba, type: 3}
-  m_PrefabInstance: {fileID: 5706933659388489140}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e221cddb717c4fd0b29f80d59797d1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
---- !u!114 &585645463 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5664200548259963264, guid: 332f1da978601164187fb83847e410ba, type: 3}
-  m_PrefabInstance: {fileID: 5706933659388489140}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f6dfa8f45a0b3a49961aca9686215fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerRanged
---- !u!114 &585645466 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5035724342607659129, guid: 332f1da978601164187fb83847e410ba, type: 3}
-  m_PrefabInstance: {fileID: 5706933659388489140}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 20c82cfb5c8c340f2978d0db748377cb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CoinCollector
 --- !u!1001 &609197233
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15424,6 +15375,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HappyCoin
   audioSource: {fileID: 793287510}
+--- !u!4 &796059000 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6695072759277445631, guid: 332f1da978601164187fb83847e410ba, type: 3}
+  m_PrefabInstance: {fileID: 5706933659388489140}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &796224438
 GameObject:
   m_ObjectHideFlags: 0
@@ -16311,9 +16267,9 @@ MonoBehaviour:
   rangedUpgradeButton: {fileID: 218354944}
   charIndex: 0
   coinCost: 4
-  playerMelee: {fileID: 585645462}
-  playerRanged: {fileID: 585645463}
-  playerHealth: {fileID: 585645458}
+  playerMelee: {fileID: 0}
+  playerRanged: {fileID: 0}
+  playerHealth: {fileID: 0}
 --- !u!1001 &1023610258
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19272,6 +19228,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7878350319992209165, guid: 63e421f79d9dd406797b5263327e1eed, type: 3}
   m_PrefabInstance: {fileID: 1668405659}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1572221573 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7571465504423493849, guid: 332f1da978601164187fb83847e410ba, type: 3}
+  m_PrefabInstance: {fileID: 5706933659388489140}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1580177612
 GameObject:
   m_ObjectHideFlags: 0
@@ -19424,11 +19385,6 @@ Transform:
   - {fileID: 4268381}
   m_Father: {fileID: 506541956}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1697546878 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7571465504423493849, guid: 332f1da978601164187fb83847e410ba, type: 3}
-  m_PrefabInstance: {fileID: 5706933659388489140}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1713919330
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20893,7 +20849,7 @@ PrefabInstance:
     - target: {fileID: 3414437134529650708, guid: 332f1da978601164187fb83847e410ba, type: 3}
       propertyPath: coinCollector
       value: 
-      objectReference: {fileID: 585645466}
+      objectReference: {fileID: 0}
     - target: {fileID: 3414437134529650708, guid: 332f1da978601164187fb83847e410ba, type: 3}
       propertyPath: happyCoinsText
       value: 

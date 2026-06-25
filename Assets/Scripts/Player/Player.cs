@@ -13,7 +13,9 @@ public class Player : MonoBehaviour
     [SerializeField] private PlayerMelee meleeScript;
     [SerializeField] private PlayerRanged rangedScript;
 
-        private Rigidbody2D rb;
+    [SerializeField] private GameObject rifleObject;
+
+    private Rigidbody2D rb;
     private Animator animator;
     private InputAction moveAction;
     private InputAction sprintAction;
@@ -58,6 +60,9 @@ public class Player : MonoBehaviour
             Debug.Log("nož");
             meleeScript.enabled = true;
             rangedScript.enabled = false;
+
+            rifleObject.SetActive(false);
+            animator.SetBool("hasRifle", false);
         }
         // 2 za ranged
         if (Keyboard.current.digit2Key.wasPressedThisFrame)
@@ -65,6 +70,9 @@ public class Player : MonoBehaviour
             Debug.Log("puška");
             meleeScript.enabled = false;
             rangedScript.enabled = true;
+
+            rifleObject.SetActive(true);
+            animator.SetBool("hasRifle", true);
         }
     }
 
