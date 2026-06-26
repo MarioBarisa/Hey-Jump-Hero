@@ -41,6 +41,9 @@ public class PlayerMelee : MonoBehaviour
 
     void Update()
     {
+        HealthSystem playerHealth = GetComponentInParent<HealthSystem>();
+        if (playerHealth != null && playerHealth.IsStunned()) return;
+
         if (cooldownTimer > 0)
         {
             cooldownTimer -= Time.deltaTime;

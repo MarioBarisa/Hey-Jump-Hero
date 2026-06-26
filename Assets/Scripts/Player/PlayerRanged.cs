@@ -26,6 +26,9 @@ public class PlayerRanged : MonoBehaviour
 
     private void Update()
     {
+        HealthSystem health = GetComponentInParent<HealthSystem>();
+        if (health != null && health.IsStunned()) return;
+        
         cooldownTimer += Time.deltaTime;
         if (Mouse.current != null && Mouse.current.leftButton.wasPressedThisFrame && cooldownTimer >= attackCooldown)
         {

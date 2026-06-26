@@ -37,6 +37,12 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        HealthSystem health = GetComponent<HealthSystem>();
+        if (health != null && health.IsStunned())
+        {
+            rb.linearVelocity = new Vector2(0, rb.linearVelocity.y);
+            return;
+        }
         float moveX = moveAction.ReadValue<Vector2>().x;
         float speed = sprintAction.IsPressed() ? runSpeed : walkSpeed;
 

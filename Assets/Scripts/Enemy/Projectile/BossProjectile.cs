@@ -18,7 +18,7 @@ public class BossProjectile : MonoBehaviour
     private void Update()
     {
         if (hit) return;
-        transform.Translate(speed * Time.deltaTime * direction, 0, 0);
+        transform.position += Vector3.right * speed * Time.deltaTime * direction;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -41,10 +41,6 @@ public class BossProjectile : MonoBehaviour
         boxCollider.enabled = true;
         CancelInvoke();
         Invoke(nameof(Deactivate), 3f);
-        float localScaleX = transform.localScale.x;
-        if (Mathf.Sign(localScaleX) != _direction)
-            localScaleX = -localScaleX;
-        transform.localScale = new Vector3(localScaleX, transform.localScale.y, transform.localScale.z);
     }
 
     private void Deactivate() { gameObject.SetActive(false); }
