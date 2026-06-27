@@ -28,6 +28,7 @@ public class HealthSystem : MonoBehaviour
     private float damageMultiplier = 1f;
     private bool shieldActive = false;
 
+    //stun (boss 3)
     private bool isStunned = false;
 
     public void ApplyStun(float duration)
@@ -44,6 +45,36 @@ public class HealthSystem : MonoBehaviour
     }
 
     public bool IsStunned() => isStunned;
+
+    // poison (boss 2)
+    private bool isPoisoned= false;
+
+    public void ApplyPoison(float duration, int damagePerTick, float tickInterval)
+    {
+        if (!isPoisoned)
+        {
+            StartCoroutine(PoisonCoroutine(duration, damagePerTick, tickInterval));
+        }
+    }
+
+    private IEnumerator PoisonCoroutine(float duration, int damagePerTick, float tickInterval)
+    {
+        isPoisoned= true;
+        float elapsed= 0f;
+        while(elapsed < duration)
+        {
+            yield return new WaitForSeconds(tickInterval);
+            elapsed+= tickInterval;
+            _currentHealth-=damagePerTick;
+            UpdateHealthText();
+            if(_currentHealth <= 0)
+            {
+                Die();
+                yield break;
+            }
+        }
+        isPoisoned= false;
+    }
 
 
     // OVO JE FUNKCIJA KOJA SE POZIVA KADA IGRAČ IZABERE HEALTH U DIALOGU, POVEĆAVA MAKSIMALNO ZDRAVLJE I TRENUTNO ZDRAVLJE ZA ODREĐENI IZNOS
