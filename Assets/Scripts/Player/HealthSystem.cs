@@ -63,7 +63,18 @@ public class HealthSystem : MonoBehaviour
         float elapsed= 0f;
         while(elapsed < duration)
         {
+            if (_spriteRenderer != null)
+            {
+                _spriteRenderer.color = new Color(0.6f, 0f, 0.8f);
+            
+            }
             yield return new WaitForSeconds(tickInterval);
+
+            if (_spriteRenderer != null)
+            {    
+                _spriteRenderer.color = Color.white;
+            }
+            
             elapsed+= tickInterval;
             _currentHealth-=damagePerTick;
             UpdateHealthText();
@@ -133,22 +144,22 @@ public class HealthSystem : MonoBehaviour
     }
 
     private IEnumerator FlashRed()
-{
-    if (_spriteRenderer != null)
     {
-        _spriteRenderer.color = Color.red;
-        yield return _flashDuration;
-        _spriteRenderer.color = Color.white;
-        yield return _flashDuration;
-    }
-    else
-    {
-        yield return _flashDuration;
-        yield return _flashDuration;
-    }
+        if (_spriteRenderer != null)
+        {
+            _spriteRenderer.color = Color.red;
+            yield return _flashDuration;
+            _spriteRenderer.color = Color.white;
+            yield return _flashDuration;
+        }
+        else
+        {
+            yield return _flashDuration;
+            yield return _flashDuration;
+        }
 
-    canTakeDamage = true;
-}
+        canTakeDamage = true;
+    }
 
     private void Die()
     {
