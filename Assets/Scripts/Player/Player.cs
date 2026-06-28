@@ -15,6 +15,12 @@ public class Player : MonoBehaviour
 
     [SerializeField] private GameObject rifleObject;
 
+
+
+    [SerializeField] private GameObject extendWeaponObject;
+    [SerializeField] private Animator extendWeaponAnimator;
+    [SerializeField] private PlayerExtend playerExtend;
+
     private Rigidbody2D rb;
     private Animator animator;
     private InputAction moveAction;
@@ -64,20 +70,43 @@ public class Player : MonoBehaviour
         if (Keyboard.current.digit1Key.wasPressedThisFrame)
         {
             Debug.Log("nož");
+
             meleeScript.enabled = true;
             rangedScript.enabled = false;
-
+            playerExtend.enabled = false;
+            
+            extendWeaponObject.SetActive(false);
             rifleObject.SetActive(false);
+
             animator.SetBool("hasRifle", false);
         }
         // 2 za ranged
         if (Keyboard.current.digit2Key.wasPressedThisFrame)
         {
             Debug.Log("puška");
+
             meleeScript.enabled = false;
             rangedScript.enabled = true;
-
+            playerExtend.enabled = false;
+            
+            extendWeaponObject.SetActive(false);
             rifleObject.SetActive(true);
+
+            animator.SetBool("hasRifle", true);
+        }
+
+        // 3 za extend weapon
+        if (Keyboard.current.digit3Key.wasPressedThisFrame)
+        {
+            Debug.Log("pike");
+
+            meleeScript.enabled = false;
+            rangedScript.enabled = false;
+            playerExtend.enabled = true;
+
+            rifleObject.SetActive(false);
+            extendWeaponObject.SetActive(true);
+
             animator.SetBool("hasRifle", true);
         }
     }
