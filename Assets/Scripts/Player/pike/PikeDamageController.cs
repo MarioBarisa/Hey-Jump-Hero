@@ -2,21 +2,24 @@ using UnityEngine;
 
 public class PikeDamageController : MonoBehaviour
 {
-    [SerializeField]
-    private DamageSystem damage;
+    [SerializeField] private GameObject damageObject;
+    [SerializeField] private DamageSystem damageSystem;
 
     void Start()
     {
-        damage.canDamage = false;
+        damageObject.SetActive(false);
+        damageSystem.canDamage = false;
     }
 
     public void EnableDamage()
     {
-        damage.canDamage = true;
+        damageObject.SetActive(true);
+        damageSystem.canDamage = true;
     }
 
     public void DisableDamage()
     {
-        damage.canDamage = false;
+        damageObject.SetActive(false);
+        damageSystem.canDamage = false;
     }
 }

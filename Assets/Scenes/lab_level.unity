@@ -697,7 +697,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &87265754
 Transform:
   m_ObjectHideFlags: 0
@@ -807,7 +807,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e3eff0de83b0e246938d67be675f60f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PikeDamageController
-  damage: {fileID: 1296157076}
+  damageObject: {fileID: 1296157073}
+  damageSystem: {fileID: 1296157076}
 --- !u!1 &91595843 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2253911629886400664, guid: 63e421f79d9dd406797b5263327e1eed, type: 3}
@@ -19230,7 +19231,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1296157074
 Transform:
   m_ObjectHideFlags: 0
