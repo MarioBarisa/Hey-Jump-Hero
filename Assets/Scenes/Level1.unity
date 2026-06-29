@@ -1578,7 +1578,7 @@ Transform:
   m_Children:
   - {fileID: 519420032}
   - {fileID: 619394802}
-  - {fileID: 844308157}
+  - {fileID: 5706933659388489141}
   - {fileID: 725258665}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14012,7 +14012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3353b25f1c1e74cf885effebd98de831, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HeyJumpHero.CameraFollow
-  target: {fileID: 732591481}
+  target: {fileID: 835340916}
   smoothSpeed: 5
   offset: {x: 0, y: 1, z: -10}
 --- !u!1001 &554353740
@@ -15120,44 +15120,6 @@ MonoBehaviour:
   m_FirstSelected: {fileID: 0}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
---- !u!4 &732591481 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9054475220553837000, guid: 332f1da978601164187fb83847e410ba, type: 3}
-  m_PrefabInstance: {fileID: 5706933659388489140}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &732591482 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2821306789725759154, guid: 332f1da978601164187fb83847e410ba, type: 3}
-  m_PrefabInstance: {fileID: 5706933659388489140}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f6dfa8f45a0b3a49961aca9686215fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerRanged
---- !u!114 &732591483 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8348023265232021917, guid: 332f1da978601164187fb83847e410ba, type: 3}
-  m_PrefabInstance: {fileID: 5706933659388489140}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e221cddb717c4fd0b29f80d59797d1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
---- !u!114 &732591487 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8506959428647022071, guid: 332f1da978601164187fb83847e410ba, type: 3}
-  m_PrefabInstance: {fileID: 5706933659388489140}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 896f4875d5d984bdc85ebc460d7b6c95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HealthSystem
 --- !u!1 &734909481 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2253911629886400664, guid: 63e421f79d9dd406797b5263327e1eed, type: 3}
@@ -16172,6 +16134,44 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!4 &835340916 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5739646159245242755, guid: 332f1da978601164187fb83847e410ba, type: 3}
+  m_PrefabInstance: {fileID: 5706933659388489140}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &835340918 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1524450245395562233, guid: 332f1da978601164187fb83847e410ba, type: 3}
+  m_PrefabInstance: {fileID: 5706933659388489140}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f6dfa8f45a0b3a49961aca9686215fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerRanged
+--- !u!114 &835340919 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4745252586474877398, guid: 332f1da978601164187fb83847e410ba, type: 3}
+  m_PrefabInstance: {fileID: 5706933659388489140}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e221cddb717c4fd0b29f80d59797d1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+--- !u!114 &835340923 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4903978537496950204, guid: 332f1da978601164187fb83847e410ba, type: 3}
+  m_PrefabInstance: {fileID: 5706933659388489140}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 896f4875d5d984bdc85ebc460d7b6c95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthSystem
 --- !u!1 &836338235 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -2253911629886400664, guid: 63e421f79d9dd406797b5263327e1eed, type: 3}
@@ -16328,11 +16328,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HappyCoin
   audioSource: {fileID: 836338237}
---- !u!4 &844308157 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6129704040852456932, guid: 332f1da978601164187fb83847e410ba, type: 3}
-  m_PrefabInstance: {fileID: 5706933659388489140}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &847967993
 GameObject:
   m_ObjectHideFlags: 0
@@ -16702,9 +16697,9 @@ MonoBehaviour:
   charIndex: 0
   coinCost: 4
   upgradeHUD: {fileID: 811337441}
-  playerMelee: {fileID: 732591483}
-  playerRanged: {fileID: 732591482}
-  playerHealth: {fileID: 732591487}
+  playerMelee: {fileID: 835340919}
+  playerRanged: {fileID: 835340918}
+  playerHealth: {fileID: 835340923}
   healthUpgradeCount: 0
   meleeUpgradeCount: 0
   rangedUpgradeCount: 0
@@ -21437,6 +21432,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerHolder
       objectReference: {fileID: 0}
+    - target: {fileID: 3936674289300117934, guid: 332f1da978601164187fb83847e410ba, type: 3}
+      propertyPath: coinText
+      value: 
+      objectReference: {fileID: 922548287}
+    - target: {fileID: 4903978537496950204, guid: 332f1da978601164187fb83847e410ba, type: 3}
+      propertyPath: shieldBar
+      value: 
+      objectReference: {fileID: 1172110471}
+    - target: {fileID: 4903978537496950204, guid: 332f1da978601164187fb83847e410ba, type: 3}
+      propertyPath: _healthText
+      value: 
+      objectReference: {fileID: 1103421680}
+    - target: {fileID: 4903978537496950204, guid: 332f1da978601164187fb83847e410ba, type: 3}
+      propertyPath: happyCoinsText
+      value: 
+      objectReference: {fileID: 922548285}
+    - target: {fileID: 4903978537496950204, guid: 332f1da978601164187fb83847e410ba, type: 3}
+      propertyPath: upgradeAvailableLable
+      value: 
+      objectReference: {fileID: 1100933185}
     - target: {fileID: 5035724342607659129, guid: 332f1da978601164187fb83847e410ba, type: 3}
       propertyPath: coinText
       value: 
@@ -21502,6 +21517,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 332f1da978601164187fb83847e410ba, type: 3}
+--- !u!4 &5706933659388489141 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7426912566292962735, guid: 332f1da978601164187fb83847e410ba, type: 3}
+  m_PrefabInstance: {fileID: 5706933659388489140}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7909192583265690658
 PrefabInstance:
   m_ObjectHideFlags: 0

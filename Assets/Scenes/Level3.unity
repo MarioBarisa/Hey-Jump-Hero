@@ -1489,7 +1489,7 @@ Transform:
   m_Children:
   - {fileID: 519420032}
   - {fileID: 619394802}
-  - {fileID: 1697546878}
+  - {fileID: 2141898490784318134}
   - {fileID: 725258665}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -14707,7 +14707,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3353b25f1c1e74cf885effebd98de831, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HeyJumpHero.CameraFollow
-  target: {fileID: 585645454}
+  target: {fileID: 2141898490784318135}
   smoothSpeed: 5
   offset: {x: 0, y: 1, z: -10}
 --- !u!1 &549146125
@@ -15112,11 +15112,6 @@ Transform:
   - {fileID: 1096954507}
   m_Father: {fileID: 506541956}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &585645454 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 9054475220553837000, guid: 332f1da978601164187fb83847e410ba, type: 3}
-  m_PrefabInstance: {fileID: 2141898490784318133}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &588985529
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17628,39 +17623,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7878350319992209165, guid: 23db3ac2e152a4413a39601e7cbb95fe, type: 3}
   m_PrefabInstance: {fileID: 1023610258}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1041562031 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2821306789725759154, guid: 332f1da978601164187fb83847e410ba, type: 3}
-  m_PrefabInstance: {fileID: 2141898490784318133}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f6dfa8f45a0b3a49961aca9686215fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerRanged
---- !u!114 &1041562032 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8348023265232021917, guid: 332f1da978601164187fb83847e410ba, type: 3}
-  m_PrefabInstance: {fileID: 2141898490784318133}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e221cddb717c4fd0b29f80d59797d1d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
---- !u!114 &1041562036 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8506959428647022071, guid: 332f1da978601164187fb83847e410ba, type: 3}
-  m_PrefabInstance: {fileID: 2141898490784318133}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 896f4875d5d984bdc85ebc460d7b6c95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HealthSystem
 --- !u!1 &1055833478
 GameObject:
   m_ObjectHideFlags: 0
@@ -20430,9 +20392,9 @@ MonoBehaviour:
   charIndex: 0
   coinCost: 4
   upgradeHUD: {fileID: 2018467107}
-  playerMelee: {fileID: 1041562032}
-  playerRanged: {fileID: 1041562031}
-  playerHealth: {fileID: 1041562036}
+  playerMelee: {fileID: 2141898490784318138}
+  playerRanged: {fileID: 2141898490784318137}
+  playerHealth: {fileID: 2141898490784318136}
   healthUpgradeCount: 0
   meleeUpgradeCount: 0
   rangedUpgradeCount: 0
@@ -20720,11 +20682,6 @@ Transform:
   - {fileID: 4268381}
   m_Father: {fileID: 506541956}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1697546878 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6129704040852456932, guid: 332f1da978601164187fb83847e410ba, type: 3}
-  m_PrefabInstance: {fileID: 2141898490784318133}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1713919330
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22401,6 +22358,26 @@ PrefabInstance:
       propertyPath: coinText
       value: 
       objectReference: {fileID: 922548287}
+    - target: {fileID: 3936674289300117934, guid: 332f1da978601164187fb83847e410ba, type: 3}
+      propertyPath: coinText
+      value: 
+      objectReference: {fileID: 922548287}
+    - target: {fileID: 4903978537496950204, guid: 332f1da978601164187fb83847e410ba, type: 3}
+      propertyPath: shieldBar
+      value: 
+      objectReference: {fileID: 1172110471}
+    - target: {fileID: 4903978537496950204, guid: 332f1da978601164187fb83847e410ba, type: 3}
+      propertyPath: _healthText
+      value: 
+      objectReference: {fileID: 1103421680}
+    - target: {fileID: 4903978537496950204, guid: 332f1da978601164187fb83847e410ba, type: 3}
+      propertyPath: happyCoinsText
+      value: 
+      objectReference: {fileID: 922548285}
+    - target: {fileID: 4903978537496950204, guid: 332f1da978601164187fb83847e410ba, type: 3}
+      propertyPath: upgradeAvailableLable
+      value: 
+      objectReference: {fileID: 783477688}
     - target: {fileID: 6129704040852456932, guid: 332f1da978601164187fb83847e410ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -22466,6 +22443,49 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 332f1da978601164187fb83847e410ba, type: 3}
+--- !u!4 &2141898490784318134 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7426912566292962735, guid: 332f1da978601164187fb83847e410ba, type: 3}
+  m_PrefabInstance: {fileID: 2141898490784318133}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2141898490784318135 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5739646159245242755, guid: 332f1da978601164187fb83847e410ba, type: 3}
+  m_PrefabInstance: {fileID: 2141898490784318133}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2141898490784318136 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4903978537496950204, guid: 332f1da978601164187fb83847e410ba, type: 3}
+  m_PrefabInstance: {fileID: 2141898490784318133}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 896f4875d5d984bdc85ebc460d7b6c95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HealthSystem
+--- !u!114 &2141898490784318137 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1524450245395562233, guid: 332f1da978601164187fb83847e410ba, type: 3}
+  m_PrefabInstance: {fileID: 2141898490784318133}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f6dfa8f45a0b3a49961aca9686215fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerRanged
+--- !u!114 &2141898490784318138 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4745252586474877398, guid: 332f1da978601164187fb83847e410ba, type: 3}
+  m_PrefabInstance: {fileID: 2141898490784318133}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e221cddb717c4fd0b29f80d59797d1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
 --- !u!1001 &3247631117660304899
 PrefabInstance:
   m_ObjectHideFlags: 0
