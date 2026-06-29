@@ -20,9 +20,9 @@ public class UpgradeHUD:MonoBehaviour
     public void Refresh()
     {
         if (dialogueLvlup == null) return;
-        meleeLabel.text =  $"Melee x{dialogueLvlup.meleeUpgradeCount}";
-        rangedLabel.text = $"Ranged x{dialogueLvlup.rangedUpgradeCount}";
-        healthLabel.text = $"Health: x{dialogueLvlup.healthUpgradeCount}";
+        meleeLabel.text =  $" x{dialogueLvlup.meleeUpgradeCount}";
+        rangedLabel.text = $" x{dialogueLvlup.rangedUpgradeCount}";
+        healthLabel.text = $" x{dialogueLvlup.healthUpgradeCount}";
     }
     
     
