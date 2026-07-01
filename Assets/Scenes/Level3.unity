@@ -21199,10 +21199,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5250203815444919919, guid: 171f36a5ac708c740bba46631af0fea6, type: 3}
-      propertyPath: m_TagString
-      value: Boss
-      objectReference: {fileID: 0}
     - target: {fileID: 6447048341781319786, guid: 171f36a5ac708c740bba46631af0fea6, type: 3}
       propertyPath: leftEdge
       value: 
