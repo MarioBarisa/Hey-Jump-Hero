@@ -21,6 +21,9 @@ public class Player : MonoBehaviour
     [SerializeField] private Animator extendWeaponAnimator;
     [SerializeField] private PlayerExtend playerExtend;
 
+    
+    [SerializeField] private weaponHUDmanager weaponHUD;
+    
     private Rigidbody2D rb;
     private Animator animator;
     private InputAction moveAction;
@@ -79,6 +82,8 @@ public class Player : MonoBehaviour
             rifleObject.SetActive(false);
 
             animator.SetBool("hasRifle", false);
+            
+            weaponHUD?.SetActiveSlot(0);
         }
         // 2 za ranged
         if (Keyboard.current.digit2Key.wasPressedThisFrame)
@@ -93,6 +98,8 @@ public class Player : MonoBehaviour
             rifleObject.SetActive(true);
 
             animator.SetBool("hasRifle", true);
+            
+            weaponHUD?.SetActiveSlot(1);
         }
 
         // 3 za extend weapon
@@ -108,6 +115,8 @@ public class Player : MonoBehaviour
             extendWeaponObject.SetActive(true);
 
             animator.SetBool("hasRifle", true);
+            
+            weaponHUD?.SetActiveSlot(2);
         }
     }
 
