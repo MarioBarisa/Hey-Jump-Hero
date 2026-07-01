@@ -15,6 +15,9 @@ public class BossPoisonController : MonoBehaviour
     [SerializeField] private float sightRange = 10f;
     [SerializeField] private LayerMask playerLayer;
 
+
+    [SerializeField] private Animator animator;
+
     private bool movingRight = true;
     private bool isShooting = false;
     private float cooldownTimer = Mathf.Infinity;
@@ -27,10 +30,14 @@ public class BossPoisonController : MonoBehaviour
 
         if (PlayerInSight())
         {
+            animator.SetBool("isWalking", false);
             if (!isShooting && cooldownTimer >= attackCooldown)
             {
                 cooldownTimer = 0f;
                 isShooting = true;
+
+                animator.SetTrigger("shoot");
+
                 Shoot();
                 Invoke(nameof(StopShooting), 1f);
             }
@@ -38,6 +45,8 @@ public class BossPoisonController : MonoBehaviour
         else
         {
             if (!isShooting)
+                animator.SetBool("isWalking", true);
+
                 Patrol();
         }
     }
@@ -60,6 +69,11 @@ public class BossPoisonController : MonoBehaviour
     private void StopShooting()
     {
         isShooting = false;
+
+        if (!PlayerInSight())
+        {
+            animator.SetBool("isWalking", true);
+        }
     }
 
     private void Patrol()
