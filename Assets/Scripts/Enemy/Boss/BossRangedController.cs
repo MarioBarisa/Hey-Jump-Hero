@@ -18,6 +18,7 @@ public class BossRangedController : MonoBehaviour
     private bool isShooting = false;
     private float cooldownTimer = Mathf.Infinity;
 
+    [SerializeField] private Animator animator;
     
 
     private void Update()
@@ -26,6 +27,8 @@ public class BossRangedController : MonoBehaviour
 
         if (PlayerInSight())
         {
+            animator.SetBool("isWalking", false);
+
             if (!isShooting && cooldownTimer >= attackCooldown)
             {
                 cooldownTimer = 0f;
@@ -37,7 +40,10 @@ public class BossRangedController : MonoBehaviour
         else
         {
             if (!isShooting)
+            {
+                animator.SetBool("isWalking", true);
                 Patrol();
+            }
         }
     }
 
