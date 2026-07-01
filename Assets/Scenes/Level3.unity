@@ -15443,7 +15443,7 @@ GameObject:
   - component: {fileID: 672366832}
   - component: {fileID: 672366831}
   m_Layer: 0
-  m_Name: Sword
+  m_Name: Knife
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15488,7 +15488,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 4364870438274327600, guid: 2d36e5e9c423843e89591e87e5eef132, type: 3}
+  m_Sprite: {fileID: 1779431001488341155, guid: c338ba3406d6c49fe905be3e55e0e976, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
