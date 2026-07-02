@@ -31,6 +31,8 @@ public class HealthSystem : MonoBehaviour
     //stun (boss 3)
     private bool isStunned = false;
 
+    [SerializeField] private AudioSource stunAudioSource;
+
     public void ApplyStun(float duration)
     {
         if (!isStunned)
@@ -40,7 +42,18 @@ public class HealthSystem : MonoBehaviour
     private IEnumerator StunCoroutine(float duration)
     {
         isStunned = true;
+
+        if (stunAudioSource != null)
+        {
+            stunAudioSource.Play();
+        }
         yield return new WaitForSeconds(duration);
+
+        if (stunAudioSource != null)
+        {
+            stunAudioSource.Stop();
+        }
+
         isStunned = false;
     }
 

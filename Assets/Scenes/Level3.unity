@@ -1087,6 +1087,7 @@ MonoBehaviour:
   upgradeAvailableLable: {fileID: 0}
   upgradeCheckCost: 4
   coinCollector: {fileID: 0}
+  stunAudioSource: {fileID: 0}
 --- !u!1001 &201062251
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23604,10 +23605,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 269974010}
     m_Modifications:
-    - target: {fileID: 333623235699196389, guid: 332f1da978601164187fb83847e410ba, type: 3}
-      propertyPath: coinText
-      value: 
-      objectReference: {fileID: 922548287}
     - target: {fileID: 3936674289300117934, guid: 332f1da978601164187fb83847e410ba, type: 3}
       propertyPath: coinText
       value: 
@@ -23628,69 +23625,53 @@ PrefabInstance:
       propertyPath: upgradeAvailableLable
       value: 
       objectReference: {fileID: 783477688}
+    - target: {fileID: 5043627250442613753, guid: 332f1da978601164187fb83847e410ba, type: 3}
+      propertyPath: m_Name
+      value: PlayerHolder
+      objectReference: {fileID: 0}
     - target: {fileID: 5335271104757290206, guid: 332f1da978601164187fb83847e410ba, type: 3}
       propertyPath: weaponHUD
       value: 
       objectReference: {fileID: 555243411}
-    - target: {fileID: 6129704040852456932, guid: 332f1da978601164187fb83847e410ba, type: 3}
+    - target: {fileID: 7426912566292962735, guid: 332f1da978601164187fb83847e410ba, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6129704040852456932, guid: 332f1da978601164187fb83847e410ba, type: 3}
+    - target: {fileID: 7426912566292962735, guid: 332f1da978601164187fb83847e410ba, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6129704040852456932, guid: 332f1da978601164187fb83847e410ba, type: 3}
+    - target: {fileID: 7426912566292962735, guid: 332f1da978601164187fb83847e410ba, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6129704040852456932, guid: 332f1da978601164187fb83847e410ba, type: 3}
+    - target: {fileID: 7426912566292962735, guid: 332f1da978601164187fb83847e410ba, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 6129704040852456932, guid: 332f1da978601164187fb83847e410ba, type: 3}
+    - target: {fileID: 7426912566292962735, guid: 332f1da978601164187fb83847e410ba, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6129704040852456932, guid: 332f1da978601164187fb83847e410ba, type: 3}
+    - target: {fileID: 7426912566292962735, guid: 332f1da978601164187fb83847e410ba, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6129704040852456932, guid: 332f1da978601164187fb83847e410ba, type: 3}
+    - target: {fileID: 7426912566292962735, guid: 332f1da978601164187fb83847e410ba, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6129704040852456932, guid: 332f1da978601164187fb83847e410ba, type: 3}
+    - target: {fileID: 7426912566292962735, guid: 332f1da978601164187fb83847e410ba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6129704040852456932, guid: 332f1da978601164187fb83847e410ba, type: 3}
+    - target: {fileID: 7426912566292962735, guid: 332f1da978601164187fb83847e410ba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6129704040852456932, guid: 332f1da978601164187fb83847e410ba, type: 3}
+    - target: {fileID: 7426912566292962735, guid: 332f1da978601164187fb83847e410ba, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8506959428647022071, guid: 332f1da978601164187fb83847e410ba, type: 3}
-      propertyPath: shieldBar
-      value: 
-      objectReference: {fileID: 1172110471}
-    - target: {fileID: 8506959428647022071, guid: 332f1da978601164187fb83847e410ba, type: 3}
-      propertyPath: _healthText
-      value: 
-      objectReference: {fileID: 1103421680}
-    - target: {fileID: 8506959428647022071, guid: 332f1da978601164187fb83847e410ba, type: 3}
-      propertyPath: happyCoinsText
-      value: 
-      objectReference: {fileID: 922548285}
-    - target: {fileID: 8506959428647022071, guid: 332f1da978601164187fb83847e410ba, type: 3}
-      propertyPath: upgradeAvailableLable
-      value: 
-      objectReference: {fileID: 783477688}
-    - target: {fileID: 8646406312438262706, guid: 332f1da978601164187fb83847e410ba, type: 3}
-      propertyPath: m_Name
-      value: PlayerHolder
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
