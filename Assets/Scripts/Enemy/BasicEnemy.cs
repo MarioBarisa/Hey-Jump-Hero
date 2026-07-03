@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour
     [SerializeField] private float knockbackDuration = 0.2f;
 
     private int facingDirection;
+    private SpriteRenderer spriteRenderer;
 
     private bool isKnockedBack;
     private float knockbackTimer;
@@ -22,6 +23,7 @@ public class Enemy : MonoBehaviour
     private void Start()
     {
         enemyRb= GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>(); //bez game object sam ce se pronaci sprite.
 
         facingDirection= 1;
     }
@@ -84,6 +86,7 @@ public void ApplyKnockback(Vector2 hitSourcePosition)
     private void Flip()
     {
         facingDirection *= -1;
-        transform.Rotate(0.0f, 180.0f, 0.0f);
+        spriteRenderer.flipX = !spriteRenderer.flipX; // FLIPA SE SAMO SPRITE NE CIJELI GAMEOBJECT.
+        groundCheck.localPosition = new Vector2(-groundCheck.localPosition.x, groundCheck.localPosition.y);
     }
 }

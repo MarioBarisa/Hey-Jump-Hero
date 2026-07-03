@@ -137,17 +137,21 @@ public class HealthSystem : MonoBehaviour
             {                                             // dijelimo sa 10 da ne prikazujemo 100 srca vec 10 srca, 20 srca
                 zivoti += "♥️ ";
             }
-
-        _healthText.text = $" {zivoti} {_currentHealth}/{_maxHealth}"; // prikazuje broj života i postotak zdravlja
-
-            if(isPlayer == false)
-        {
-             string zivotiEnemy = "";
-            for (int i = 0; i < _currentHealth/2; i++) // Podjela sa 2 da se manje srca prikazuje
+            
+            _healthText.text = $" {zivoti} {_currentHealth}/{_maxHealth}"; // prikazuje broj života i postotak zdravlja
+        
+        
+            if(isPlayer == false){ 
+                string zivotiEnemy = "";
+            
+                float healthPrecentage = _currentHealth / (float)_maxHealth;
+                _healthText.color = Color.Lerp(Color.red, Color.green, healthPrecentage);
+                
+                for (int i = 0; i < _currentHealth; i++) // Podjela sa 2 da se manje srca prikazuje
             {                                             
-                zivotiEnemy += "♥️ ";
+                zivotiEnemy = i.ToString();
             }
-            _healthText.text = $" {zivotiEnemy}";
+            _healthText.text = $"HP: {zivotiEnemy}";
         }
 
         if (upgradeAvailableLable != null && coinCollector != null && isPlayer)
