@@ -14092,6 +14092,11 @@ MonoBehaviour:
   target: {fileID: 835340916}
   smoothSpeed: 5
   offset: {x: 0, y: 1, z: -10}
+--- !u!212 &536463956 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 6196785152377777893, guid: 6138ebcf92ffbe840980b7ab1b60e101, type: 3}
+  m_PrefabInstance: {fileID: 7909192583265690658}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &554353740
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22828,6 +22833,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 821508513911006410, guid: 6138ebcf92ffbe840980b7ab1b60e101, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 2048
+      objectReference: {fileID: 0}
+    - target: {fileID: 1407801557027120338, guid: 6138ebcf92ffbe840980b7ab1b60e101, type: 3}
+      propertyPath: enemySprite
+      value: 
+      objectReference: {fileID: 536463956}
     - target: {fileID: 6214495853213523533, guid: 6138ebcf92ffbe840980b7ab1b60e101, type: 3}
       propertyPath: m_Name
       value: Enemy
