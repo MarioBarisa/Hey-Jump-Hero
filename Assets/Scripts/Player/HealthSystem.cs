@@ -30,6 +30,10 @@ public class HealthSystem : MonoBehaviour
 
     //stun (boss 3)
     private bool isStunned = false;
+    
+    public Slider healthBarSlider;
+    public TextMeshProUGUI healthBarText;
+    [SerializeField] private GameObject bossHealthBarPanel;
 
     [SerializeField] private AudioSource stunAudioSource;
 
@@ -115,6 +119,9 @@ public class HealthSystem : MonoBehaviour
         _currentHealth = _maxHealth;
         if (coinCollector == null) coinCollector = GetComponent<CoinCollector>();
         UpdateHealthText();
+
+        if (isBoss && bossHealthBarPanel != null)
+            bossHealthBarPanel.SetActive(true);
     }
 
     public void TakeDamage(int damage)
@@ -129,6 +136,20 @@ public class HealthSystem : MonoBehaviour
 
     private void UpdateHealthText()
     {
+        
+        if (isBoss)
+        {
+            if (healthBarSlider != null)
+            {
+                healthBarSlider.value = _currentHealth;
+                healthBarSlider.maxValue = _maxHealth;
+                healthBarSlider.minValue = 0;
+            }
+            
+            
+            if (healthBarText != null)
+                healthBarText.text = $"{_currentHealth}/{_maxHealth}";
+        }
         
             if (_healthText == null) return;
 
@@ -152,6 +173,7 @@ public class HealthSystem : MonoBehaviour
                 zivotiEnemy = i.ToString();
             }
             _healthText.text = $"HP: {zivotiEnemy}";
+            
         }
 
         if (upgradeAvailableLable != null && coinCollector != null && isPlayer)
@@ -185,10 +207,15 @@ public class HealthSystem : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
-        if (isBoss && currentScene + 1 < SceneManager.sceneCountInBuildSettings)
+        if (isBoss)
         {
-             FindFirstObjectByType<FadeManager>().LoadNextLevel();
-            
+            if (bossHealthBarPanel != null)
+                bossHealthBarPanel.SetActive(false);
+
+            if (currentScene + 1 < SceneManager.sceneCountInBuildSettings)
+            {
+                FindFirstObjectByType<FadeManager>().LoadNextLevel();
+            }
             return;
         }
         else
