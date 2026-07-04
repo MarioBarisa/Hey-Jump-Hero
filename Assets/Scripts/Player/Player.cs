@@ -42,6 +42,7 @@ public class Player : MonoBehaviour
         jumpAction = inputActions.FindAction("Jump");
             rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        weaponHUD?.SetActiveSlot(0);
     }
 
     void Update()
