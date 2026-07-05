@@ -154,7 +154,7 @@ public class HealthSystem : MonoBehaviour
             
             
             if (healthBarText != null)
-                healthBarText.text = $"{_currentHealth}/{_maxHealth}";
+                healthBarText.text = $"{_currentHealth}";
         }
         
             if (_healthText == null) return;
