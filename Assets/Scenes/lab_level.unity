@@ -1025,6 +1025,11 @@ MonoBehaviour:
   upgradeAvailableLable: {fileID: 0}
   upgradeCheckCost: 4
   coinCollector: {fileID: 0}
+  damageAudioSource: {fileID: 0}
+  healthBarSlider: {fileID: 0}
+  healthBarText: {fileID: 0}
+  bossHealthBarPanel: {fileID: 0}
+  stunAudioSource: {fileID: 0}
 --- !u!1001 &201062251
 PrefabInstance:
   m_ObjectHideFlags: 0

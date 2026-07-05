@@ -28,6 +28,8 @@ public class HealthSystem : MonoBehaviour
     private float damageMultiplier = 1f;
     private bool shieldActive = false;
 
+    [SerializeField] private AudioSource damageAudioSource;
+
     //stun (boss 3)
     private bool isStunned = false;
     
@@ -94,6 +96,9 @@ public class HealthSystem : MonoBehaviour
             
             elapsed+= tickInterval;
             _currentHealth-=damagePerTick;
+            
+            PlayDamageSound();
+
             UpdateHealthText();
             if(_currentHealth <= 0)
             {
@@ -129,6 +134,7 @@ public class HealthSystem : MonoBehaviour
         if (!canTakeDamage) return;
         canTakeDamage = false;
         _currentHealth -= Mathf.RoundToInt(damage * damageMultiplier);
+        PlayDamageSound();
         UpdateHealthText(); 
         StartCoroutine(FlashRed());
         if (_currentHealth <= 0) Die();
@@ -271,6 +277,14 @@ public class HealthSystem : MonoBehaviour
         if (upgradeAvailableLable != null && coinCollector != null && isPlayer)
         {
             upgradeAvailableLable.gameObject.SetActive(coinCollector.HasEnoughCoins(upgradeCheckCost));
+        }
+    }
+
+    private void PlayDamageSound()
+    {
+        if (isPlayer && damageAudioSource != null)
+        {
+            damageAudioSource.Play();
         }
     }
 }
