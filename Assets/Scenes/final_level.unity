@@ -7556,38 +7556,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5739646159245242755, guid: 332f1da978601164187fb83847e410ba, type: 3}
   m_PrefabInstance: {fileID: 1381190018268514961}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &602086410 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2528298593070707606, guid: 7620b3fc7724e8e4d826ab0443896757, type: 3}
-  m_PrefabInstance: {fileID: 7938980901712854428}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &602086415
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 602086410}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 896f4875d5d984bdc85ebc460d7b6c95, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HealthSystem
-  _maxHealth: 50
-  _healthText: {fileID: 0}
-  shieldBar: {fileID: 0}
-  isPlayer: 0
-  isBoss: 0
-  happyCoinsText: {fileID: 0}
-  addHappyCoinsOnDeath: 2
-  upgradeAvailableLable: {fileID: 0}
-  upgradeCheckCost: 4
-  coinCollector: {fileID: 0}
-  damageAudioSource: {fileID: 0}
-  healthBarSlider: {fileID: 0}
-  healthBarText: {fileID: 0}
-  bossHealthBarPanel: {fileID: 0}
-  stunAudioSource: {fileID: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -10687,14 +10655,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 525327064952692785, guid: 7620b3fc7724e8e4d826ab0443896757, type: 3}
-      propertyPath: m_Size.x
-      value: 1.2535
-      objectReference: {fileID: 0}
-    - target: {fileID: 525327064952692785, guid: 7620b3fc7724e8e4d826ab0443896757, type: 3}
-      propertyPath: m_Offset.x
-      value: -0.88795567
-      objectReference: {fileID: 0}
     - target: {fileID: 2528298593070707606, guid: 7620b3fc7724e8e4d826ab0443896757, type: 3}
       propertyPath: m_Name
       value: FinalBoss
@@ -10750,10 +10710,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2528298593070707606, guid: 7620b3fc7724e8e4d826ab0443896757, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 602086415}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7620b3fc7724e8e4d826ab0443896757, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

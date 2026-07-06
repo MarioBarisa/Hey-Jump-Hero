@@ -28,6 +28,9 @@ public class PlayerProjectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.isTrigger && !collision.TryGetComponent(out HealthSystem _))
+            return;
+            
         if (collision.TryGetComponent(out HealthSystem health))
         {
             health.TakeDamage(damage);
