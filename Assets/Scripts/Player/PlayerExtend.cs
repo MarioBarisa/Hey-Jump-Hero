@@ -5,9 +5,9 @@ public class PlayerExtend : MonoBehaviour
 {
     [SerializeField] private Animator weaponAnimator;
 
-    [SerializeField]
-    private float attackCooldown = 1f;
+    [SerializeField] private float attackCooldown = 1f;
 
+    [SerializeField] private AudioSource audioSource;
 
     private float cooldownTimer;
 
@@ -20,6 +20,10 @@ public class PlayerExtend : MonoBehaviour
             cooldownTimer = 0;
 
             weaponAnimator.SetTrigger("extend");
+            if (audioSource != null && audioSource.clip != null)
+            {
+                audioSource.Play();
+            }
         }
     }
 }
