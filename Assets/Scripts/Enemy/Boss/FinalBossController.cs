@@ -65,7 +65,7 @@ public class FinalBossController : MonoBehaviour
             if (transform.position.x >= rightEdge.position.x)
             {
                 movingRight = false;
-                transform.localScale = new Vector3(-1, 1, 1);
+                transform.localScale = new Vector3(1, 1, 1);
             }
         }
         else
@@ -75,7 +75,7 @@ public class FinalBossController : MonoBehaviour
             if (transform.position.x <= leftEdge.position.x)
             {
                 movingRight = true;
-                transform.localScale = new Vector3(1, 1, 1);
+                transform.localScale = new Vector3(-1, 1, 1);
             }
         }
     }
