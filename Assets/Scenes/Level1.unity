@@ -14301,11 +14301,6 @@ MonoBehaviour:
   target: {fileID: 835340916}
   smoothSpeed: 5
   offset: {x: 0, y: 1, z: -10}
---- !u!212 &536463956 stripped
-SpriteRenderer:
-  m_CorrespondingSourceObject: {fileID: 6196785152377777893, guid: 6138ebcf92ffbe840980b7ab1b60e101, type: 3}
-  m_PrefabInstance: {fileID: 7909192583265690658}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &554353740
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22237,10 +22232,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1664531069}
     - target: {fileID: 8647755558379583477, guid: 5e7c24b622da4a643ad3f91daf519e43, type: 3}
-      propertyPath: _healthText
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8647755558379583477, guid: 5e7c24b622da4a643ad3f91daf519e43, type: 3}
       propertyPath: healthBarText
       value: 
       objectReference: {fileID: 412788691}
@@ -22253,8 +22244,7 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 577610354}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 8087637238616144903, guid: 5e7c24b622da4a643ad3f91daf519e43, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e7c24b622da4a643ad3f91daf519e43, type: 3}
@@ -23552,14 +23542,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 821508513911006410, guid: 6138ebcf92ffbe840980b7ab1b60e101, type: 3}
-      propertyPath: m_VerticalAlignment
-      value: 2048
-      objectReference: {fileID: 0}
-    - target: {fileID: 1407801557027120338, guid: 6138ebcf92ffbe840980b7ab1b60e101, type: 3}
-      propertyPath: enemySprite
-      value: 
-      objectReference: {fileID: 536463956}
     - target: {fileID: 6214495853213523533, guid: 6138ebcf92ffbe840980b7ab1b60e101, type: 3}
       propertyPath: m_Name
       value: Enemy

@@ -282,7 +282,7 @@ public class HealthSystem : MonoBehaviour
 
     private void PlayDamageSound()
     {
-        if (isPlayer && damageAudioSource != null)
+        if (damageAudioSource != null)
         {
             damageAudioSource.Play();
         }
