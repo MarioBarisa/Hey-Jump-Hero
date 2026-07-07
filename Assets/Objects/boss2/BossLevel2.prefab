@@ -324,7 +324,7 @@ GameObject:
   - component: {fileID: 1833728476043198990}
   m_Layer: 7
   m_Name: Circle (3)
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -479,7 +479,7 @@ GameObject:
   - component: {fileID: 756471369766085666}
   m_Layer: 7
   m_Name: Circle
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -634,7 +634,7 @@ GameObject:
   - component: {fileID: 8104150418106751972}
   m_Layer: 7
   m_Name: Circle (1)
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -890,6 +890,7 @@ MonoBehaviour:
   shieldBar: {fileID: 0}
   isPlayer: 0
   isBoss: 1
+  isFinalBoss: 0
   happyCoinsText: {fileID: 0}
   addHappyCoinsOnDeath: 2
   upgradeAvailableLable: {fileID: 0}
@@ -980,7 +981,7 @@ GameObject:
   - component: {fileID: 2698066774911330872}
   m_Layer: 7
   m_Name: Circle (4)
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1135,7 +1136,7 @@ GameObject:
   - component: {fileID: 3890009273814717199}
   m_Layer: 7
   m_Name: Circle (2)
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

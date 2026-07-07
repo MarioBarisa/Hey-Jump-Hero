@@ -6,7 +6,7 @@ public class EnemyProjectile : MonoBehaviour
     private float direction;
     private bool hit;
 
-    private BoxCollider2D boxCollider;
+    private BoxCollider2D boxCollider; 
 
     private int damage;
 
@@ -30,10 +30,22 @@ public class EnemyProjectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.CompareTag("Projectile"))
+        {
+            hit = true;
+            boxCollider.enabled = false;
+            Deactivate();
+            return;
+        }
+
+        if (collision.isTrigger && !collision.TryGetComponent(out HealthSystem _))
+            return;
+            
         if (collision.TryGetComponent(out HealthSystem health))
         {
             health.TakeDamage(damage);
         }
+        
         hit= true;
         boxCollider.enabled= false;
 

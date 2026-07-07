@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 7456148926384467955}
   m_Layer: 7
   m_Name: Circle (7)
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -309,7 +309,7 @@ GameObject:
   - component: {fileID: 120318243337518646}
   m_Layer: 7
   m_Name: Circle
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -591,7 +591,7 @@ GameObject:
   - component: {fileID: 608580828518687837}
   m_Layer: 7
   m_Name: Circle (5)
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -804,7 +804,7 @@ GameObject:
   - component: {fileID: 6543700667872769769}
   m_Layer: 7
   m_Name: Circle (2)
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -984,7 +984,7 @@ GameObject:
   - component: {fileID: 8853737670710737792}
   m_Layer: 7
   m_Name: Circle (4)
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1164,7 +1164,7 @@ GameObject:
   - component: {fileID: 3453926591097883678}
   m_Layer: 7
   m_Name: Circle (3)
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1414,6 +1414,7 @@ MonoBehaviour:
   shieldBar: {fileID: 0}
   isPlayer: 0
   isBoss: 0
+  isFinalBoss: 0
   happyCoinsText: {fileID: 0}
   addHappyCoinsOnDeath: 2
   upgradeAvailableLable: {fileID: 0}
@@ -1539,7 +1540,7 @@ GameObject:
   - component: {fileID: 4652982634312675802}
   m_Layer: 7
   m_Name: Circle (1)
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1928,7 +1929,7 @@ GameObject:
   - component: {fileID: 837996621153220022}
   m_Layer: 7
   m_Name: Circle (6)
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2108,7 +2109,7 @@ GameObject:
   - component: {fileID: 4035859512365559590}
   m_Layer: 7
   m_Name: Circle (9)
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2541,7 +2542,7 @@ GameObject:
   - component: {fileID: 4249148828853344208}
   m_Layer: 7
   m_Name: Circle (8)
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

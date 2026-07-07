@@ -4,7 +4,7 @@ public class BossProjectile : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private float stunDuration = 1f;
     private float direction;
-    private bool hit;
+    private bool hit; 
     private BoxCollider2D boxCollider;
     private int damage;
 
@@ -23,11 +23,23 @@ public class BossProjectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.CompareTag("Projectile"))
+        {
+            hit = true;
+            boxCollider.enabled = false;
+            Invoke(nameof(Deactivate), 0.1f);
+            return;
+        }
+
+        if (collision.isTrigger && !collision.TryGetComponent(out HealthSystem _))
+            return;
+            
         if (collision.TryGetComponent(out HealthSystem health))
         {
             health.TakeDamage(damage);
             health.ApplyStun(stunDuration);
         }
+        
         hit = true;
         boxCollider.enabled = false;
         Invoke(nameof(Deactivate), 0.1f);

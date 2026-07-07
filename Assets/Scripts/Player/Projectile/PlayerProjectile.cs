@@ -28,6 +28,14 @@ public class PlayerProjectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.CompareTag("Projectile"))
+        {
+            hit = true;
+            boxCollider.enabled = false;
+            Deactivate();
+            return;
+        }
+
         if (collision.isTrigger && !collision.TryGetComponent(out HealthSystem _))
             return;
             
@@ -35,6 +43,7 @@ public class PlayerProjectile : MonoBehaviour
         {
             health.TakeDamage(damage);
         }
+        
         hit = true;
         boxCollider.enabled = false;
         Deactivate();

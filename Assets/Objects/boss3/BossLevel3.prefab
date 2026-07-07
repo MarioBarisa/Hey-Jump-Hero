@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5164703661277093909}
   m_Layer: 0
   m_Name: Boss3projectile
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -389,7 +389,7 @@ GameObject:
   - component: {fileID: 5815334558267936591}
   m_Layer: 0
   m_Name: Boss3projectile (1)
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -759,7 +759,7 @@ GameObject:
   - component: {fileID: 5721593388029745491}
   m_Layer: 0
   m_Name: Boss3projectile (5)
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -963,7 +963,7 @@ GameObject:
   - component: {fileID: 3680871150578747743}
   m_Layer: 0
   m_Name: Boss3projectile (2)
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1303,6 +1303,7 @@ MonoBehaviour:
   shieldBar: {fileID: 0}
   isPlayer: 0
   isBoss: 1
+  isFinalBoss: 0
   happyCoinsText: {fileID: 0}
   addHappyCoinsOnDeath: 2
   upgradeAvailableLable: {fileID: 0}
@@ -1359,7 +1360,7 @@ GameObject:
   - component: {fileID: 8592806699483631332}
   m_Layer: 0
   m_Name: Boss3projectile (4)
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1677,7 +1678,7 @@ GameObject:
   - component: {fileID: 8032531555499859504}
   m_Layer: 0
   m_Name: Boss3projectile (3)
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
