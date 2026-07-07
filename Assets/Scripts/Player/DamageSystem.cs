@@ -32,17 +32,7 @@ public class DamageSystem : MonoBehaviour
         float horizontal = Mathf.Sign(collisionTransform.position.x - transform.position.x);
         Vector2 forceDirection = new Vector2(horizontal, 0.75f).normalized;
 
-        float force = knockbackForce;
-
-        if(collisionTransform.TryGetComponent(out HealthSystem health))
-        {
-            if (health.IsBoss())
-            {
-                force*= 0.4f;
-            }
-        }
-
         rb.linearVelocity = Vector2.zero;
-        rb.AddForce(forceDirection * force, ForceMode2D.Impulse);
+        rb.AddForce(forceDirection * knockbackForce, ForceMode2D.Impulse);
     }
 }
