@@ -1,6 +1,3 @@
-using System;
-using JetBrains.Annotations;
-using Unity.VectorGraphics;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
