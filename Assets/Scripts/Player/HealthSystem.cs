@@ -203,10 +203,7 @@ public class HealthSystem : MonoBehaviour
     {
         if (_spriteRenderer != null)
         {
-            Debug.Log("FLASH!");
-            Debug.Log(_spriteRenderer.color);
             _spriteRenderer.color = Color.red;
-            Debug.Log(_spriteRenderer.color);
             yield return _flashDuration;
             _spriteRenderer.color = Color.white;
             yield return _flashDuration;

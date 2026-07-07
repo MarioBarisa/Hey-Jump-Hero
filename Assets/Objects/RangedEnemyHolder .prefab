@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7878350319992209165}
   - component: {fileID: 3626916397498700004}
   - component: {fileID: 1160356261127867848}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Enemy2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -486,7 +486,7 @@ GameObject:
   - component: {fileID: 3192905375982215340}
   - component: {fileID: 7621393525777543259}
   - component: {fileID: 3164794565905231449}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -765,7 +765,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7999734960345635191}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: 'RangedEnemyHolder '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1343,7 +1343,7 @@ GameObject:
   - component: {fileID: 805625876408119654}
   - component: {fileID: 3704613754065514674}
   - component: {fileID: 2562009934672606048}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: RangedEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1714,7 +1714,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 552917853047776286}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ProjectileHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1757,7 +1757,7 @@ GameObject:
   - component: {fileID: 5173739427938397492}
   - component: {fileID: 2768675409212610108}
   - component: {fileID: 6979087866222364537}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1892,7 +1892,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2174958849219105946}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: ProjectilePoint
   m_TagString: Untagged
   m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
@@ -2317,7 +2317,7 @@ GameObject:
   - component: {fileID: 3158546025821042466}
   - component: {fileID: 4485393774391443388}
   - component: {fileID: 597664007201932275}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2408,7 +2408,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6931624097590294248}
   - component: {fileID: 1290646950068017523}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: take_damage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
