@@ -13,6 +13,8 @@ public class HealthSystem : MonoBehaviour
 
     [SerializeField] private bool isBoss;
 
+    [SerializeField] private bool isFinalBoss;
+
     [SerializeField] private GameObject happyCoinsText; // Prefab za sretni novčić
     [SerializeField] private int addHappyCoinsOnDeath = 2;
 
@@ -134,6 +136,15 @@ public class HealthSystem : MonoBehaviour
         if (!canTakeDamage) return;
         canTakeDamage = false;
         _currentHealth -= Mathf.RoundToInt(damage * damageMultiplier);
+
+        if (isFinalBoss)
+        {
+            FinalBossController boss= GetComponent<FinalBossController>();
+
+            if(boss!=null)
+                boss.OnDamaged();
+        }
+
         PlayDamageSound();
         UpdateHealthText(); 
         StartCoroutine(FlashRed());

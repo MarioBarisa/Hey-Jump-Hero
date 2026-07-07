@@ -16,6 +16,12 @@ public class FinalBossController : MonoBehaviour
     [Header("Damage")]
     [SerializeField] private GameObject damageObject;
 
+    [Header("Behind Detection")]
+    [SerializeField] private float behindCheckDistance = 100f;
+    [SerializeField] private LayerMask playerLayer;
+
+    private bool playerBehind;
+
     private bool movingRight = false;
     private bool playerInRange = false;
     private float cooldownTimer = Mathf.Infinity;
@@ -30,6 +36,8 @@ public class FinalBossController : MonoBehaviour
 
     private void Update()
     {
+        CheckPlayerBehind();
+        
         cooldownTimer+= Time.deltaTime;
 
         if (playerInRange)
@@ -80,6 +88,33 @@ public class FinalBossController : MonoBehaviour
         }
     }
 
+    private void CheckPlayerBehind()
+    {
+        Vector2 direction= movingRight ? Vector2.left : Vector2.right;
+
+        RaycastHit2D hit= Physics2D.Raycast(
+            transform.position,
+            direction,
+            behindCheckDistance,
+            playerLayer
+        );
+
+        playerBehind = hit.collider != null;
+    }
+
+    public void OnDamaged()
+    {
+        if(!playerBehind)
+            return;
+        
+        movingRight= !movingRight;
+
+        if(movingRight)
+            transform.localScale= new Vector3(-1, 1, 1);
+        else
+            transform.localScale= new Vector3(1, 1, 1);
+    }
+
     public void SetPlayerInRange(bool value)
     {
         playerInRange= value;
@@ -93,5 +128,17 @@ public class FinalBossController : MonoBehaviour
     public void DisableDamage()
     {
         damageObject.SetActive(false);
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+
+        Vector2 direction = movingRight ? Vector2.left : Vector2.right;
+
+        Gizmos.DrawLine(
+            transform.position,
+            transform.position + (Vector3)(direction * behindCheckDistance)
+        );
     }
 }
