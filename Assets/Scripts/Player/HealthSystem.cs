@@ -298,4 +298,9 @@ public class HealthSystem : MonoBehaviour
             damageAudioSource.Play();
         }
     }
+
+    public bool IsBoss()
+    {
+        return isBoss || isFinalBoss;
+    }
 }
