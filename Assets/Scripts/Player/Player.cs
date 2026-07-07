@@ -26,22 +26,30 @@ public class Player : MonoBehaviour
     
     private Rigidbody2D rb;
     private Animator animator;
+    private SpriteRenderer sr;
     private InputAction moveAction;
     private InputAction sprintAction;
     private InputAction jumpAction;
     private int jumpCount = 0;
     private const int maxJumps = 1;
+    
+    //infinite fall prevention
+    private float fallTimer = 0f;
+    [SerializeField] private float maxFallTimer = 2.5f;
+    private bool isDead = false;
 
     void OnEnable() => inputActions.FindActionMap("Player").Enable();
     void OnDisable() => inputActions.FindActionMap("Player").Disable();
 
     void Start()
     {
+        isDead = false; //da fall timer radi nakon respawna
         moveAction = inputActions.FindAction("Move");
         sprintAction = inputActions.FindAction("Sprint");
         jumpAction = inputActions.FindAction("Jump");
-            rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
+        sr = GetComponent<SpriteRenderer>();
         weaponHUD?.SetActiveSlot(0);
     }
 
@@ -68,6 +76,28 @@ public class Player : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, 0);
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             jumpCount++;
+        }
+        
+        //fall = death
+
+        if (rb.linearVelocity.y < -0.1f)
+        {
+            fallTimer += Time.deltaTime;
+            if (!isDead && fallTimer >= maxFallTimer)
+            {
+                isDead = true;
+                GetComponent<HealthSystem>()?.TakeDamage(9999);
+            }
+        }
+
+        float fallRatio = fallTimer / maxFallTimer;
+        if (fallRatio > 0.5f)
+        {
+            sr.color = Color.Lerp(Color.white, Color.red, (fallRatio - 0.5f) / 0.5f);
+        }
+        else
+        {
+            sr.color = Color.white;
         }
 
         // 1 za melee
@@ -123,6 +153,7 @@ public class Player : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        fallTimer = 0;
         jumpCount = 0;
     }
 }
