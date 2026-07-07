@@ -11160,7 +11160,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Glamuros
+  m_text: Georgeous
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 89cbb4fd071650447873cc629a08450b, type: 2}
   m_sharedMaterial: {fileID: -8791904847725024692, guid: 89cbb4fd071650447873cc629a08450b, type: 2}
