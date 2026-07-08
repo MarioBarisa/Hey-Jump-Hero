@@ -50474,7 +50474,7 @@ MonoBehaviour:
   noPayButton: {fileID: 368776944}
   charIndex: 0
   bossObject: {fileID: 1334833077}
-  coinCost: 5
+  coinCost: 205
 --- !u!4 &5284531670815501709 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6288988051652407120, guid: 158dca00d7ae04ad2bb129d046d0a3d6, type: 3}
