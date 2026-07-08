@@ -95,7 +95,7 @@ public class Player : MonoBehaviour
         {
             sr.color = Color.Lerp(Color.white, Color.red, (fallRatio - 0.5f) / 0.5f);
         }
-        else if (fallTimer > 0f)
+        else if (fallTimer > 0.4f)
         {
             sr.color = Color.white;
         }
