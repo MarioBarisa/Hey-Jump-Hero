@@ -222,6 +222,7 @@ public class HealthSystem : MonoBehaviour
         int currentScene= SceneManager.GetActiveScene().buildIndex;
         if (isPlayer)
         {
+            Time.timeScale = 1f;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
         if (isBoss)
