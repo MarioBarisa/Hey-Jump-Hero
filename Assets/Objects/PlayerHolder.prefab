@@ -316,6 +316,7 @@ MonoBehaviour:
   extendWeaponAnimator: {fileID: 8436248420385316831}
   playerExtend: {fileID: 8148421015702211522}
   weaponHUD: {fileID: 0}
+  maxFallTimer: 2.5
 --- !u!50 &7368826439065575060
 Rigidbody2D:
   serializedVersion: 5
@@ -476,7 +477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f6dfa8f45a0b3a49961aca9686215fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerRanged
-  attackCooldown: 0.2
+  attackCooldown: 1
   damage: 6
   projectilePoint: {fileID: 7268361807334166404}
   projectiles:
@@ -504,7 +505,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerExtend
   weaponAnimator: {fileID: 8436248420385316831}
-  attackCooldown: 1
+  attackCooldown: 1.5
   audioSource: {fileID: 5114549361099807728}
 --- !u!1 &2297614054366091864
 GameObject:
