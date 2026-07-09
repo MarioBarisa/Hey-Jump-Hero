@@ -24,6 +24,10 @@ public class Player : MonoBehaviour
     
     [SerializeField] private weaponHUDmanager weaponHUD;
     
+    //stamina system 
+    [SerializeField] private StaminaSystem staminaSystem;
+    
+    
     private Rigidbody2D rb;
     private Animator animator;
     private SpriteRenderer sr;
@@ -62,7 +66,19 @@ public class Player : MonoBehaviour
             return;
         }
         float moveX = moveAction.ReadValue<Vector2>().x;
-        float speed = sprintAction.IsPressed() ? runSpeed : walkSpeed;
+        float speed;
+        
+        //STAMINA SYS
+        bool wantsSprint = sprintAction.IsPressed() && Mathf.Abs(moveAction.ReadValue<Vector2>().x) > 0.1f;
+
+        if (wantsSprint && staminaSystem != null && staminaSystem.TryDrain(Time.deltaTime))
+        {
+            speed = runSpeed;
+        }
+        else
+        {
+            speed = walkSpeed;
+        }
 
         rb.linearVelocity = new Vector2(moveX * speed, rb.linearVelocity.y);
 
