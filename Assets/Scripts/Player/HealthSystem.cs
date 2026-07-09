@@ -229,6 +229,7 @@ public class HealthSystem : MonoBehaviour
         {
             if (bossHealthBarPanel != null)
                 bossHealthBarPanel.SetActive(false);
+                Destroy(gameObject);
 
             if (currentScene + 1 < SceneManager.sceneCountInBuildSettings)
             {
