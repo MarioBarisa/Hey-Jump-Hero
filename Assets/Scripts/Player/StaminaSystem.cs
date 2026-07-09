@@ -106,10 +106,10 @@ namespace HeyJumpHero
             }
 
 
-            if (staminaCanvasGroup != null)
-            {
-                staminaCanvasGroup.alpha = (currentStamina < maxStamina) ? 1f : 0.4f;
-            }
+            float fillAlpha = (currentStamina < maxStamina) ? 1f : 0.4f;
+            Color c = staminaFill.color;
+            c.a = fillAlpha;
+            staminaFill.color = c;
         }
 
     }
