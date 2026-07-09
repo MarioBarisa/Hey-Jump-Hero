@@ -1338,7 +1338,7 @@ MonoBehaviour:
   - {fileID: 6018393529691449428}
   - {fileID: 3915131797008293311}
   projectileDamage: 10
-  attackCooldown: 4
+  attackCooldown: 2
   sightRange: 10
   playerLayer:
     serializedVersion: 2
