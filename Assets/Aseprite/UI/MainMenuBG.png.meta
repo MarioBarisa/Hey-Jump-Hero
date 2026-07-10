@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: c121c21337d35ad4d80ae671c9bc7f43
+guid: b25bd7f5c98f54c4ea1c1e462a7accd4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3415517963977237952
-    second: JumpStudiosLogoBig_0
+      213: -5409611486675845757
+    second: MainMenuBG_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: JumpStudiosLogoBig_0
+      name: MainMenuBG_0
       rect:
         serializedVersion: 2
-        x: 39
-        y: 86
-        width: 743
-        height: 665
+        x: 0
+        y: 0
+        width: 1920
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0c524d6fd7b566f20800000000000000
-      internalID: 3415517963977237952
+      spriteID: 38d30d3a3033de4b0800000000000000
+      internalID: -5409611486675845757
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      JumpStudiosLogoBig_0: 3415517963977237952
+      MainMenuBG_0: -5409611486675845757
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
