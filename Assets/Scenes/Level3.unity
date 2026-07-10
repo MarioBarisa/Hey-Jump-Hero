@@ -51351,9 +51351,9 @@ MonoBehaviour:
   - ...
   - happy coins to
   - UPGRADE!
-  healthUpgradeAmount: 2
-  meleeUpgradeAmount: 2
-  rangedUpgradeAmount: 2
+  healthUpgradeAmount: 10
+  meleeUpgradeAmount: 4
+  rangedUpgradeAmount: 3
   writingSpeed: 0.05
   dialougeText: {fileID: 808004710}
   healthUpgradeButton: {fileID: 946022547}

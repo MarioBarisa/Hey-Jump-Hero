@@ -491,6 +491,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2562367344749881436, guid: 6138ebcf92ffbe840980b7ab1b60e101, type: 3}
+      propertyPath: damageAmount
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3925536807520481846, guid: 6138ebcf92ffbe840980b7ab1b60e101, type: 3}
+      propertyPath: _maxHealth
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3925536807520481846, guid: 6138ebcf92ffbe840980b7ab1b60e101, type: 3}
+      propertyPath: addHappyCoinsOnDeath
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6214495853213523533, guid: 6138ebcf92ffbe840980b7ab1b60e101, type: 3}
       propertyPath: m_Name
       value: Enemy (3)
@@ -31352,6 +31364,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1407801557027120338, guid: 6138ebcf92ffbe840980b7ab1b60e101, type: 3}
+      propertyPath: movementSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2562367344749881436, guid: 6138ebcf92ffbe840980b7ab1b60e101, type: 3}
+      propertyPath: damageAmount
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3925536807520481846, guid: 6138ebcf92ffbe840980b7ab1b60e101, type: 3}
+      propertyPath: _maxHealth
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 3925536807520481846, guid: 6138ebcf92ffbe840980b7ab1b60e101, type: 3}
+      propertyPath: addHappyCoinsOnDeath
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6214495853213523533, guid: 6138ebcf92ffbe840980b7ab1b60e101, type: 3}
       propertyPath: m_Name
       value: Enemy (8)
@@ -33458,6 +33486,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3925536807520481846, guid: 6138ebcf92ffbe840980b7ab1b60e101, type: 3}
+      propertyPath: addHappyCoinsOnDeath
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6214495853213523533, guid: 6138ebcf92ffbe840980b7ab1b60e101, type: 3}
       propertyPath: m_Name
       value: Enemy (7)
@@ -34008,6 +34040,10 @@ PrefabInstance:
     - target: {fileID: 692982112803673898, guid: 6138ebcf92ffbe840980b7ab1b60e101, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3925536807520481846, guid: 6138ebcf92ffbe840980b7ab1b60e101, type: 3}
+      propertyPath: addHappyCoinsOnDeath
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6214495853213523533, guid: 6138ebcf92ffbe840980b7ab1b60e101, type: 3}
       propertyPath: m_Name
@@ -34812,8 +34848,8 @@ MonoBehaviour:
   - ...
   - happy coins to
   - UPGRADE!
-  healthUpgradeAmount: 2
-  meleeUpgradeAmount: 2
+  healthUpgradeAmount: 10
+  meleeUpgradeAmount: 3
   rangedUpgradeAmount: 2
   writingSpeed: 0.05
   dialougeText: {fileID: 1813529470}
@@ -38475,6 +38511,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1407801557027120338, guid: 6138ebcf92ffbe840980b7ab1b60e101, type: 3}
+      propertyPath: movementSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3925536807520481846, guid: 6138ebcf92ffbe840980b7ab1b60e101, type: 3}
+      propertyPath: _maxHealth
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 3925536807520481846, guid: 6138ebcf92ffbe840980b7ab1b60e101, type: 3}
+      propertyPath: addHappyCoinsOnDeath
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6214495853213523533, guid: 6138ebcf92ffbe840980b7ab1b60e101, type: 3}
       propertyPath: m_Name
       value: Enemy (9)
@@ -38877,9 +38925,25 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 805625876408119654, guid: 1ac1ab1bbd4d848418104e9f84d99710, type: 3}
+      propertyPath: damage
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 805625876408119654, guid: 1ac1ab1bbd4d848418104e9f84d99710, type: 3}
+      propertyPath: attackCooldown
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1092791425338046300, guid: 1ac1ab1bbd4d848418104e9f84d99710, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2848988744026708697, guid: 1ac1ab1bbd4d848418104e9f84d99710, type: 3}
+      propertyPath: _maxHealth
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2848988744026708697, guid: 1ac1ab1bbd4d848418104e9f84d99710, type: 3}
+      propertyPath: addHappyCoinsOnDeath
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3031059970943649077, guid: 1ac1ab1bbd4d848418104e9f84d99710, type: 3}
       propertyPath: m_Name
@@ -39613,6 +39677,14 @@ PrefabInstance:
     - target: {fileID: 1092791425338046300, guid: 1ac1ab1bbd4d848418104e9f84d99710, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2848988744026708697, guid: 1ac1ab1bbd4d848418104e9f84d99710, type: 3}
+      propertyPath: _maxHealth
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 2848988744026708697, guid: 1ac1ab1bbd4d848418104e9f84d99710, type: 3}
+      propertyPath: addHappyCoinsOnDeath
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3031059970943649077, guid: 1ac1ab1bbd4d848418104e9f84d99710, type: 3}
       propertyPath: m_Name
@@ -41909,6 +41981,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3925536807520481846, guid: 6138ebcf92ffbe840980b7ab1b60e101, type: 3}
+      propertyPath: addHappyCoinsOnDeath
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6214495853213523533, guid: 6138ebcf92ffbe840980b7ab1b60e101, type: 3}
       propertyPath: m_Name
       value: Enemy (1)
@@ -42171,6 +42247,10 @@ PrefabInstance:
     - target: {fileID: 1092791425338046300, guid: 1ac1ab1bbd4d848418104e9f84d99710, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2500688175704999851, guid: 1ac1ab1bbd4d848418104e9f84d99710, type: 3}
+      propertyPath: m_Mass
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 3031059970943649077, guid: 1ac1ab1bbd4d848418104e9f84d99710, type: 3}
       propertyPath: m_Name
@@ -43232,6 +43312,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 2500688175704999851, guid: 1ac1ab1bbd4d848418104e9f84d99710, type: 3}
+      propertyPath: m_Mass
+      value: 500
+      objectReference: {fileID: 0}
     - target: {fileID: 3031059970943649077, guid: 1ac1ab1bbd4d848418104e9f84d99710, type: 3}
       propertyPath: m_Name
       value: RangedEnemyHolder  (4)
@@ -43349,6 +43433,10 @@ PrefabInstance:
     - target: {fileID: 1092791425338046300, guid: 1ac1ab1bbd4d848418104e9f84d99710, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2848988744026708697, guid: 1ac1ab1bbd4d848418104e9f84d99710, type: 3}
+      propertyPath: _maxHealth
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3031059970943649077, guid: 1ac1ab1bbd4d848418104e9f84d99710, type: 3}
       propertyPath: m_Name
@@ -47808,6 +47896,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1407801557027120338, guid: 6138ebcf92ffbe840980b7ab1b60e101, type: 3}
+      propertyPath: movementSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2562367344749881436, guid: 6138ebcf92ffbe840980b7ab1b60e101, type: 3}
+      propertyPath: damageAmount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3202330146023460487, guid: 6138ebcf92ffbe840980b7ab1b60e101, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 3202330146023460487, guid: 6138ebcf92ffbe840980b7ab1b60e101, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 3925536807520481846, guid: 6138ebcf92ffbe840980b7ab1b60e101, type: 3}
+      propertyPath: _maxHealth
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 6214495853213523533, guid: 6138ebcf92ffbe840980b7ab1b60e101, type: 3}
       propertyPath: m_Name
       value: Enemy (2)
@@ -48118,7 +48226,7 @@ PrefabInstance:
       objectReference: {fileID: 1664531069}
     - target: {fileID: 8647755558379583477, guid: 5e7c24b622da4a643ad3f91daf519e43, type: 3}
       propertyPath: _maxHealth
-      value: 60
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 8647755558379583477, guid: 5e7c24b622da4a643ad3f91daf519e43, type: 3}
       propertyPath: healthBarText
@@ -48314,6 +48422,10 @@ PrefabInstance:
     - target: {fileID: 692982112803673898, guid: 6138ebcf92ffbe840980b7ab1b60e101, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3925536807520481846, guid: 6138ebcf92ffbe840980b7ab1b60e101, type: 3}
+      propertyPath: addHappyCoinsOnDeath
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6214495853213523533, guid: 6138ebcf92ffbe840980b7ab1b60e101, type: 3}
       propertyPath: m_Name
@@ -51135,7 +51247,7 @@ MonoBehaviour:
   noPayButton: {fileID: 368776944}
   charIndex: 0
   bossObject: {fileID: 1334833077}
-  coinCost: 205
+  coinCost: 20
 --- !u!4 &5284531670815501709 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6288988051652407120, guid: 158dca00d7ae04ad2bb129d046d0a3d6, type: 3}
@@ -51330,6 +51442,10 @@ PrefabInstance:
     - target: {fileID: 692982112803673898, guid: 6138ebcf92ffbe840980b7ab1b60e101, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3925536807520481846, guid: 6138ebcf92ffbe840980b7ab1b60e101, type: 3}
+      propertyPath: addHappyCoinsOnDeath
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6214495853213523533, guid: 6138ebcf92ffbe840980b7ab1b60e101, type: 3}
       propertyPath: m_Name

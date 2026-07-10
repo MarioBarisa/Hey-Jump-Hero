@@ -30813,7 +30813,7 @@ MonoBehaviour:
   - UPGRADE!
   healthUpgradeAmount: 12
   meleeUpgradeAmount: 4
-  rangedUpgradeAmount: 4
+  rangedUpgradeAmount: 3
   writingSpeed: 0.05
   dialougeText: {fileID: 389453779}
   healthUpgradeButton: {fileID: 338438179}
