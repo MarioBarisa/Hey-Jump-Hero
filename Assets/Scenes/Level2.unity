@@ -30809,12 +30809,11 @@ MonoBehaviour:
   indicator: {fileID: 1793513225}
   dialouges:
   - spend
-  - ...
   - happy coins to
   - UPGRADE!
-  healthUpgradeAmount: 2
-  meleeUpgradeAmount: 2
-  rangedUpgradeAmount: 2
+  healthUpgradeAmount: 12
+  meleeUpgradeAmount: 4
+  rangedUpgradeAmount: 4
   writingSpeed: 0.05
   dialougeText: {fileID: 389453779}
   healthUpgradeButton: {fileID: 338438179}
@@ -107938,6 +107937,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1497674551}
     - target: {fileID: 7136480760860197489, guid: 862e06da79e239d47856255eefb37876, type: 3}
+      propertyPath: _maxHealth
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 7136480760860197489, guid: 862e06da79e239d47856255eefb37876, type: 3}
       propertyPath: healthBarText
       value: 
       objectReference: {fileID: 882599349}
@@ -108691,11 +108694,11 @@ PrefabInstance:
       objectReference: {fileID: 1184009412}
     - target: {fileID: 7426912566292962735, guid: 332f1da978601164187fb83847e410ba, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -90.7
+      value: -91.39
       objectReference: {fileID: 0}
     - target: {fileID: 7426912566292962735, guid: 332f1da978601164187fb83847e410ba, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -29.1
+      value: -28.95
       objectReference: {fileID: 0}
     - target: {fileID: 7426912566292962735, guid: 332f1da978601164187fb83847e410ba, type: 3}
       propertyPath: m_LocalPosition.z
@@ -123243,23 +123246,20 @@ MonoBehaviour:
   window: {fileID: 5284531670815501705}
   indicator: {fileID: 5284531670815501703}
   dialouges:
-  - BIP-BOP-BIP
-  - ...
-  - I am boss...
-  - ATM!!
-  - paY me happY 2000000 happyccoins
-  - a86745c3286rt
-  - i meant 20 happy coins
-  - AND!!
-  - i WILL unlock  boss
-  - :)
+  - BIP-
+  - Bop
+  - I boss ATM
+  - paY  happyccoins
+  - 20
+  - 'and boss will be '
+  - SPAWNED
   writingSpeed: 0.05
   dialougeText: {fileID: 5284531670815501704}
   payButton: {fileID: 1203721698}
   noPayButton: {fileID: 368776944}
   charIndex: 0
   bossObject: {fileID: 1539448453}
-  coinCost: 10
+  coinCost: 20
 --- !u!4 &5284531670815501709 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6288988051652407120, guid: 158dca00d7ae04ad2bb129d046d0a3d6, type: 3}
