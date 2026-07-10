@@ -1082,6 +1082,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'RangedEnemyHolder '
       objectReference: {fileID: 0}
+    - target: {fileID: 5173739427938397492, guid: 1ac1ab1bbd4d848418104e9f84d99710, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5173739427938397492, guid: 1ac1ab1bbd4d848418104e9f84d99710, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5173739427938397492, guid: 1ac1ab1bbd4d848418104e9f84d99710, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 5173739427938397492, guid: 1ac1ab1bbd4d848418104e9f84d99710, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 5173739427938397492, guid: 1ac1ab1bbd4d848418104e9f84d99710, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 7999734960345635191, guid: 1ac1ab1bbd4d848418104e9f84d99710, type: 3}
       propertyPath: m_LocalScale.x
       value: 0.925
@@ -30478,6 +30498,30 @@ PrefabInstance:
     - target: {fileID: 3031059970943649077, guid: 1ac1ab1bbd4d848418104e9f84d99710, type: 3}
       propertyPath: m_Name
       value: RangedEnemyHolder  (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5173739427938397492, guid: 1ac1ab1bbd4d848418104e9f84d99710, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5173739427938397492, guid: 1ac1ab1bbd4d848418104e9f84d99710, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5173739427938397492, guid: 1ac1ab1bbd4d848418104e9f84d99710, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5173739427938397492, guid: 1ac1ab1bbd4d848418104e9f84d99710, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.619
+      objectReference: {fileID: 0}
+    - target: {fileID: 5173739427938397492, guid: 1ac1ab1bbd4d848418104e9f84d99710, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.631
+      objectReference: {fileID: 0}
+    - target: {fileID: 5173739427938397492, guid: 1ac1ab1bbd4d848418104e9f84d99710, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 7999734960345635191, guid: 1ac1ab1bbd4d848418104e9f84d99710, type: 3}
       propertyPath: m_LocalScale.x
@@ -84920,6 +84964,30 @@ PrefabInstance:
     - target: {fileID: 3031059970943649077, guid: 1ac1ab1bbd4d848418104e9f84d99710, type: 3}
       propertyPath: m_Name
       value: RangedEnemyHolder  (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5173739427938397492, guid: 1ac1ab1bbd4d848418104e9f84d99710, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5173739427938397492, guid: 1ac1ab1bbd4d848418104e9f84d99710, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5173739427938397492, guid: 1ac1ab1bbd4d848418104e9f84d99710, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5173739427938397492, guid: 1ac1ab1bbd4d848418104e9f84d99710, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 5173739427938397492, guid: 1ac1ab1bbd4d848418104e9f84d99710, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 5173739427938397492, guid: 1ac1ab1bbd4d848418104e9f84d99710, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
       objectReference: {fileID: 0}
     - target: {fileID: 7999734960345635191, guid: 1ac1ab1bbd4d848418104e9f84d99710, type: 3}
       propertyPath: m_LocalScale.x
