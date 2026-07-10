@@ -10,15 +10,21 @@ public class RangedEnemy : MonoBehaviour
     [Header("Ranged Attack")]
     [SerializeField] private Transform projectilePoint;
     [SerializeField] private GameObject[] projectiles;
-    
+
     [Header("Collider Parameters")]
     [SerializeField] private float colliderDistance;
     [SerializeField] private BoxCollider2D boxCollider;
 
     [Header("Player Layer")]
     [SerializeField] private LayerMask playerLayer;
-    private float cooldownTimer= Mathf.Infinity;
 
+    private float cooldownTimer = Mathf.Infinity;
+    private SpriteRenderer spriteRenderer;   // ← samo ovo dodajemo
+
+    private void Start()
+    {
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+    }
 
     private void Update()
     {
@@ -26,78 +32,82 @@ public class RangedEnemy : MonoBehaviour
 
         if (PlayerInSight())
         {
-            if(cooldownTimer >= attackCooldown)
+            if (cooldownTimer >= attackCooldown)
             {
                 RangedAttack();
             }
-        }        
+        }
     }
-
 
     private void RangedAttack()
     {
-        cooldownTimer= 0;
+        cooldownTimer = 0;
+        int projectileIndex = FindProjectile();
 
-        int projectileIndex= FindProjectile();
+        projectiles[projectileIndex].transform.position = projectilePoint.position;
 
-
-        projectiles[projectileIndex].transform.position= projectilePoint.position;
-        
-        EnemyProjectile projectile =
-            projectiles[projectileIndex].GetComponent<EnemyProjectile>();
-
+        EnemyProjectile projectile = projectiles[projectileIndex].GetComponent<EnemyProjectile>();
         projectile.SetDamage(damage);
-        projectile.SetDirection(transform.localScale.x);
+
+        // Koristimo trenutni flip stanje spritea
+        float dir = spriteRenderer.flipX ? -1f : 1f;
+        projectile.SetDirection(dir);
     }
 
     private int FindProjectile()
     {
-        for(int i=0; i<projectiles.Length; i++)
+        for (int i = 0; i < projectiles.Length; i++)
         {
             if (!projectiles[i].activeInHierarchy)
-            {
                 return i;
-            }
         }
         return 0;
     }
 
-
     private bool PlayerInSight()
     {
-        RaycastHit2D hit= Physics2D.BoxCast(
-            boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
-            new Vector3(
-                boxCollider.bounds.size.x * range,
-                boxCollider.bounds.size.y,
-                boxCollider.bounds.size.z
-            ),
+        float dir = spriteRenderer.flipX ? -1f : 1f;
+
+        RaycastHit2D hit = Physics2D.BoxCast(
+            boxCollider.bounds.center + transform.right * range * dir * colliderDistance,
+            new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z),
             0,
-            Vector2.left,
+            Vector2.left,   // ostavljamo originalno ili možeš koristiti new Vector2(dir, 0)
             0,
             playerLayer
         );
-        return hit.collider!= null;
+
+        return hit.collider != null;
     }
 
     private void OnDrawGizmos()
     {
-        Gizmos.color= Color.red;
+        if (boxCollider == null) return;
+
+        float dir = (spriteRenderer != null && spriteRenderer.flipX) ? -1f : 1f;
+
+        Gizmos.color = Color.red;
         Gizmos.DrawWireCube(
-            boxCollider.bounds.center + transform.right * range * transform.localScale.x * colliderDistance,
-            new Vector3(
-                boxCollider.bounds.size.x * range,
-                boxCollider.bounds.size.y,
-                boxCollider.bounds.size.z
-            )
+            boxCollider.bounds.center + transform.right * range * dir * colliderDistance,
+            new Vector3(boxCollider.bounds.size.x * range, boxCollider.bounds.size.y, boxCollider.bounds.size.z)
         );
     }
 
+    // MINIMALNI FLIP (kao u basic Enemy) 
     public void Flip()
     {
-        Vector3 scale = transform.localScale;
-        scale.x *= -1;
-        transform.localScale = scale;
-    }
+        if (spriteRenderer == null)
+            spriteRenderer = GetComponentInChildren<SpriteRenderer>();
 
+        spriteRenderer.flipX = !spriteRenderer.flipX;
+
+        // Flip projectilePoint (kao groundCheck)
+        if (projectilePoint != null)
+        {
+            projectilePoint.localPosition = new Vector2(
+                -projectilePoint.localPosition.x, 
+                projectilePoint.localPosition.y
+            );
+        }
+    }
 }
