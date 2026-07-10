@@ -9,10 +9,9 @@ public class MainMenu : MonoBehaviour
     public GameObject mainMenuPanel;
     public GameObject customisationPanel;
     public GameObject introPanel;
-    public CanvasGroup fadeCanvasGroup; // For the fade out
+    public CanvasGroup fadeCanvasGroup;
 
     [Header("Customization Reference")]
-    // Drag your Character Customization Panel or wherever the script lives here!
     public CharacterCustomizerGrid customizerGrid;
 
     [Header("Intro Story Slides")]
@@ -20,12 +19,14 @@ public class MainMenu : MonoBehaviour
     public Sprite[] introSlides;   
     private int currentSlideIndex = 0;
 
+    [Header("Audio Settings")]
+    public AudioSource menuAudioSource;
+
     [Header("Scene Config")]
     public string gameplaySceneName = "Level1";
 
     void Start()
     {
-        // Make sure panels start in the correct state
         mainMenuPanel.SetActive(true);
         customisationPanel.SetActive(false);
         introPanel.SetActive(false);
@@ -35,28 +36,31 @@ public class MainMenu : MonoBehaviour
             fadeCanvasGroup.alpha = 0f;
             fadeCanvasGroup.blocksRaycasts = false;
         }
+        if (menuAudioSource != null)
+        {
+            menuAudioSource.loop = true;
+            if (!menuAudioSource.isPlaying)
+            {
+                menuAudioSource.Play();
+            }
+        }
     }
 
-    // --- BUTTON METHODS ---
-
-    // Hook this up to your Play button
     public void OnPlayButtonPressed()
     {
         mainMenuPanel.SetActive(false);
         customisationPanel.SetActive(true);
     }
 
-    // Hook this up to a "Back" button inside your Customisation panel
     public void OnBackButtonFromCustomizer()
     {
         customisationPanel.SetActive(false);
         mainMenuPanel.SetActive(true);
     }
 
-    // Hook this up to the "Continue" button inside your Customisation panel
     public void OnContinueToIntro()
     {
-        // 1. TELL THE CUSTOMIZER GRID TO SAVE TO PLAYERPREFS BEFORE LEAVING!
+
         if (customizerGrid != null)
         {
             customizerGrid.SaveCustomizationChoices();
@@ -67,7 +71,6 @@ public class MainMenu : MonoBehaviour
             Debug.LogWarning("[MainMenu] Customizer Grid reference is missing! Selections won't save.");
         }
 
-        // 2. Clear panel and advance to story slideshow
         customisationPanel.SetActive(false);
         introPanel.SetActive(true);
         
@@ -75,7 +78,6 @@ public class MainMenu : MonoBehaviour
         DisplaySlide();
     }
 
-    // Hook this up to your Quit button
     public void QuitGame()
     {
         Application.Quit();
@@ -84,7 +86,6 @@ public class MainMenu : MonoBehaviour
         #endif
     }
 
-    // --- INTRO SLIDESHOW LOGIC ---
 
    void Update()
     {
@@ -128,14 +129,28 @@ public class MainMenu : MonoBehaviour
         float duration = 1.0f; 
         float elapsed = 0f;
 
+        float startVolume = menuAudioSource != null ? menuAudioSource.volume : 1.0f;
+
         while (elapsed < duration)
         {
             elapsed += Time.deltaTime;
+            float normalizedTime = Mathf.Clamp01(elapsed / duration);
+
             if (fadeCanvasGroup != null)
             {
-                fadeCanvasGroup.alpha = Mathf.Clamp01(elapsed / duration);
+                fadeCanvasGroup.alpha = normalizedTime;
             }
+        
+            if (menuAudioSource != null)
+            {
+                menuAudioSource.volume = Mathf.Lerp(startVolume, 0f, normalizedTime);
+            }
+
             yield return null;
+        }
+        if (menuAudioSource != null)
+        {
+            menuAudioSource.Stop();
         }
 
         SceneManager.LoadScene(gameplaySceneName);
