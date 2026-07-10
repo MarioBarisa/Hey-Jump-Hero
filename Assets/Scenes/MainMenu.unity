@@ -1022,7 +1022,8 @@ MonoBehaviour:
   customisationPanel: {fileID: 1558380716}
   introPanel: {fileID: 1665106155}
   fadeCanvasGroup: {fileID: 1164961793}
-  introImageDisplay: {fileID: 0}
+  customizerGrid: {fileID: 1558380720}
+  introImageDisplay: {fileID: 1665106157}
   introSlides:
   - {fileID: -1652133365196456872, guid: b20ad042fa1e3f74cb4fe58e16723a2d, type: 3}
   - {fileID: -8304205385857674713, guid: 1eacf295ae3b609408171b067f35b218, type: 3}
@@ -3793,15 +3794,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: -1652133365196456872, guid: b20ad042fa1e3f74cb4fe58e16723a2d, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4

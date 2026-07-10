@@ -11,6 +11,10 @@ public class MainMenu : MonoBehaviour
     public GameObject introPanel;
     public CanvasGroup fadeCanvasGroup; // For the fade out
 
+    [Header("Customization Reference")]
+    // Drag your Character Customization Panel or wherever the script lives here!
+    public CharacterCustomizerGrid customizerGrid;
+
     [Header("Intro Story Slides")]
     public Image introImageDisplay; 
     public Sprite[] introSlides;   
@@ -52,6 +56,18 @@ public class MainMenu : MonoBehaviour
     // Hook this up to the "Continue" button inside your Customisation panel
     public void OnContinueToIntro()
     {
+        // 1. TELL THE CUSTOMIZER GRID TO SAVE TO PLAYERPREFS BEFORE LEAVING!
+        if (customizerGrid != null)
+        {
+            customizerGrid.SaveCustomizationChoices();
+            Debug.Log("[MainMenu] Character customization saved successfully!");
+        }
+        else
+        {
+            Debug.LogWarning("[MainMenu] Customizer Grid reference is missing! Selections won't save.");
+        }
+
+        // 2. Clear panel and advance to story slideshow
         customisationPanel.SetActive(false);
         introPanel.SetActive(true);
         
@@ -70,11 +86,12 @@ public class MainMenu : MonoBehaviour
 
     // --- INTRO SLIDESHOW LOGIC ---
 
-    void Update()
+   void Update()
     {
         if (introPanel.activeInHierarchy)
         {
-            if (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space))
+            if ((UnityEngine.InputSystem.Mouse.current != null && UnityEngine.InputSystem.Mouse.current.leftButton.wasPressedThisFrame) || 
+                (UnityEngine.InputSystem.Keyboard.current != null && UnityEngine.InputSystem.Keyboard.current.spaceKey.wasPressedThisFrame))
             {
                 AdvanceSlide();
             }
