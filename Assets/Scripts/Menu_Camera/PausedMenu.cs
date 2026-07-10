@@ -46,7 +46,7 @@ public class PausedMenu : MonoBehaviour
     public void MainMenuButton()
     {
         Time.timeScale = 1f;
-        // SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void QuitGameButton()
