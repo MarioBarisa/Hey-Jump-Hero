@@ -12906,6 +12906,10 @@ PrefabInstance:
       propertyPath: bossHealthBarPanel
       value: 
       objectReference: {fileID: 731727863}
+    - target: {fileID: 1831976478924162260, guid: 7620b3fc7724e8e4d826ab0443896757, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 2528298593070707606, guid: 7620b3fc7724e8e4d826ab0443896757, type: 3}
       propertyPath: m_Name
       value: FinalBoss
