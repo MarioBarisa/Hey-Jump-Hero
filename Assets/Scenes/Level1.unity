@@ -306,6 +306,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1681951959}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &16621827 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4546736930953675612, guid: 332f1da978601164187fb83847e410ba, type: 3}
+  m_PrefabInstance: {fileID: 5706933659388489140}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &19711103
 GameObject:
   m_ObjectHideFlags: 0
@@ -28336,6 +28341,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HappyCoin
   audioSource: {fileID: 528425050}
+--- !u!1 &529239350 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2537305848762532461, guid: 332f1da978601164187fb83847e410ba, type: 3}
+  m_PrefabInstance: {fileID: 5706933659388489140}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &554353740
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33514,7 +33524,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1524450245395562233, guid: 332f1da978601164187fb83847e410ba, type: 3}
   m_PrefabInstance: {fileID: 5706933659388489140}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2086225489}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1f6dfa8f45a0b3a49961aca9686215fb, type: 3}
@@ -33525,7 +33535,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4745252586474877398, guid: 332f1da978601164187fb83847e410ba, type: 3}
   m_PrefabInstance: {fileID: 5706933659388489140}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2086225489}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9e221cddb717c4fd0b29f80d59797d1d, type: 3}
@@ -33536,7 +33546,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4903978537496950204, guid: 332f1da978601164187fb83847e410ba, type: 3}
   m_PrefabInstance: {fileID: 5706933659388489140}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2086225489}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 896f4875d5d984bdc85ebc460d7b6c95, type: 3}
@@ -50822,6 +50832,25 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0.5}
   m_Radius: 0.375
+--- !u!1 &2086225489 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 690337043654299626, guid: 332f1da978601164187fb83847e410ba, type: 3}
+  m_PrefabInstance: {fileID: 5706933659388489140}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2086225497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086225489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb7c38519b5c4924f8b3a060142c411e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAppearanceManager
+  rifleObject: {fileID: 16621827}
+  extendWeaponObject: {fileID: 529239350}
 --- !u!1001 &2132075147
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -51265,6 +51294,10 @@ PrefabInstance:
       propertyPath: coinText
       value: 
       objectReference: {fileID: 922548287}
+    - target: {fileID: 1524450245395562233, guid: 332f1da978601164187fb83847e410ba, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3414437134529650708, guid: 332f1da978601164187fb83847e410ba, type: 3}
       propertyPath: shieldBar
       value: 
@@ -51388,7 +51421,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 690337043654299626, guid: 332f1da978601164187fb83847e410ba, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2086225497}
   m_SourcePrefab: {fileID: 100100000, guid: 332f1da978601164187fb83847e410ba, type: 3}
 --- !u!4 &5706933659388489141 stripped
 Transform:

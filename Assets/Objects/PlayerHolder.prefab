@@ -316,6 +316,7 @@ MonoBehaviour:
   extendWeaponAnimator: {fileID: 8436248420385316831}
   playerExtend: {fileID: 8148421015702211522}
   weaponHUD: {fileID: 0}
+  staminaSystem: {fileID: 0}
   maxFallTimer: 2.5
 --- !u!50 &7368826439065575060
 Rigidbody2D:
