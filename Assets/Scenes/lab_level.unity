@@ -13221,6 +13221,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 644097302}
     m_Modifications:
+    - target: {fileID: 2500688175704999851, guid: 1ac1ab1bbd4d848418104e9f84d99710, type: 3}
+      propertyPath: m_GravityScale
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3031059970943649077, guid: 1ac1ab1bbd4d848418104e9f84d99710, type: 3}
       propertyPath: m_Name
       value: 'RangedEnemyHolder '
