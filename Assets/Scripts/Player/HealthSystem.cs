@@ -127,7 +127,7 @@ public class HealthSystem : MonoBehaviour
         if (coinCollector == null) coinCollector = GetComponent<CoinCollector>();
         UpdateHealthText();
 
-        if (isBoss && bossHealthBarPanel != null)
+        if ((isBoss || isFinalBoss)  && bossHealthBarPanel != null)
             bossHealthBarPanel.SetActive(true);
     }
 
@@ -154,7 +154,7 @@ public class HealthSystem : MonoBehaviour
     private void UpdateHealthText()
     {
         
-        if (isBoss)
+        if (isBoss || isFinalBoss)
         {
             if (healthBarSlider != null)
             {
@@ -225,7 +225,7 @@ public class HealthSystem : MonoBehaviour
             Time.timeScale = 1f;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
-        if (isBoss)
+        if (isBoss || isFinalBoss)
         {
             if (bossHealthBarPanel != null)
                 bossHealthBarPanel.SetActive(false);

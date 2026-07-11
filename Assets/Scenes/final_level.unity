@@ -14137,11 +14137,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1299177505111393726, guid: 7620b3fc7724e8e4d826ab0443896757, type: 3}
       propertyPath: isBoss
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1299177505111393726, guid: 7620b3fc7724e8e4d826ab0443896757, type: 3}
       propertyPath: isFinalBoss
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1299177505111393726, guid: 7620b3fc7724e8e4d826ab0443896757, type: 3}
       propertyPath: healthBarText
