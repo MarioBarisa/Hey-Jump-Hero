@@ -13653,7 +13653,7 @@ PrefabInstance:
     - target: {fileID: 3936674289300117934, guid: 332f1da978601164187fb83847e410ba, type: 3}
       propertyPath: coinText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 139367981}
     - target: {fileID: 4903978537496950204, guid: 332f1da978601164187fb83847e410ba, type: 3}
       propertyPath: shieldBar
       value: 
@@ -13661,7 +13661,7 @@ PrefabInstance:
     - target: {fileID: 4903978537496950204, guid: 332f1da978601164187fb83847e410ba, type: 3}
       propertyPath: _healthText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 375675865}
     - target: {fileID: 4903978537496950204, guid: 332f1da978601164187fb83847e410ba, type: 3}
       propertyPath: happyCoinsText
       value: 

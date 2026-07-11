@@ -66755,7 +66755,7 @@ PrefabInstance:
     - target: {fileID: 3936674289300117934, guid: 332f1da978601164187fb83847e410ba, type: 3}
       propertyPath: coinText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2116191342}
     - target: {fileID: 4903978537496950204, guid: 332f1da978601164187fb83847e410ba, type: 3}
       propertyPath: shieldBar
       value: 
@@ -66763,15 +66763,15 @@ PrefabInstance:
     - target: {fileID: 4903978537496950204, guid: 332f1da978601164187fb83847e410ba, type: 3}
       propertyPath: _healthText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 493792597}
     - target: {fileID: 4903978537496950204, guid: 332f1da978601164187fb83847e410ba, type: 3}
       propertyPath: happyCoinsText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2116191340}
     - target: {fileID: 4903978537496950204, guid: 332f1da978601164187fb83847e410ba, type: 3}
       propertyPath: upgradeAvailableLable
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 952046626}
     - target: {fileID: 5043627250442613753, guid: 332f1da978601164187fb83847e410ba, type: 3}
       propertyPath: m_Name
       value: PlayerHolder
