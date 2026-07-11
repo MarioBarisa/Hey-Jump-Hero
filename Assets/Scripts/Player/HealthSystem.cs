@@ -176,7 +176,7 @@ public class HealthSystem : MonoBehaviour
                 zivoti += "♥️ ";
             }
             
-            _healthText.text = $" {zivoti} {_currentHealth}/{_maxHealth}"; // prikazuje broj života i postotak zdravlja
+            _healthText.text = $"{_currentHealth}/{_maxHealth}"; // prikazuje broj života i postotak zdravlja, MAKNUTA srca
         
         
             if(isPlayer == false){ 
