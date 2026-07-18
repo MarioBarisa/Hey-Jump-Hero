@@ -1,13 +1,26 @@
 
 
 <h1>Hey, Jump Hero!</h1>
+<img alt="Jump_Studios_Logo" src="images/icon.png" width="150" />
 <p>Have you ever wondered what would happen if you beat A GOD?
 Dive into Jump Studios’ first game: Hey, Jump Hero! and experience this god-slaying adventure through a challenging action-platformer.
 
 Customise your character to your liking, strategically use the weapons given to you in order to kill the bosses, upgrade your gear and reach the very end where you will finally meet up with a bored god Georgeous who put you through all your challenges!
 
 Are you ready to destroy someone’s god complex? And thus boost yours?
+
+Download for free for both Mac and Windows!
 </p>
+
+| **Custom MC** | **Level 1** | **Level 2** |
+|:-------------:|:-----------:|:-----------:|
+| <img src="images/charcustom.png" width="300" alt="Custom MC"/> | <img src="images/lvl1.png" width="300" alt="Level 1"/> | <img src="images/lvl2.png" width="300" alt="Level 2"/> |
+
+| **Level 3** | **Main Boss** |
+|:-----------:|:-------------:|
+| <img src="images/lvl3.png" width="300" alt="Level 3"/> | <img src="images/boss.png" width="300" alt="Main boss"/> |
+
+
 <h4>Made by Jump Studios, 2026. ( Paula Vorih, Mario Bariša, Luka Ritoša )<h4>
   <p align="start">
   <img src="https://img.shields.io/badge/Unity-%23000000.svg?logo=unity&logoColor=white" alt="Made with Unity"/>
